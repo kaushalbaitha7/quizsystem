@@ -1,24 +1,604 @@
 [
   {
-    "id": 1,
-    "question": "Which keyword is used to define a function in Python?",
+    "question": "What is Prompt Engineering?",
     "options": [
-      "func",
-      "function",
-      "def",
-      "define"
+      "Designing effective prompts for AI models",
+      "Writing Python programs",
+      "Creating databases",
+      "Training hardware"
     ],
-    "answer": "def"
+    "answer": "Designing effective prompts for AI models"
   },
   {
-    "id": 2,
-    "question": "Which library is used to build web apps in Python?",
+    "question": "Which prompting technique provides no examples to the AI?",
     "options": [
-      "NumPy",
+      "Few-shot Prompting",
+      "Zero-shot Prompting",
+      "Chain Prompting",
+      "Multi Prompting"
+    ],
+    "answer": "Zero-shot Prompting"
+  },
+  {
+    "question": "Few-shot prompting means:",
+    "options": [
+      "Giving a few examples before asking the task",
+      "Giving no examples",
+      "Using multiple APIs",
+      "Training the AI model"
+    ],
+    "answer": "Giving a few examples before asking the task"
+  },
+  {
+    "question": "What is the primary goal of Prompt Engineering?",
+    "options": [
+      "Improve AI responses",
+      "Create hardware",
+      "Increase RAM",
+      "Design websites"
+    ],
+    "answer": "Improve AI responses"
+  },
+  {
+    "question": "Which prompt is best for summarizing a resume?",
+    "options": [
+      "Analyze this resume and summarize the candidate's skills.",
+      "Turn off the computer.",
+      "Calculate 100+200.",
+      "Create a database."
+    ],
+    "answer": "Analyze this resume and summarize the candidate's skills."
+  },
+  {
+    "question": "A Question Answering Prompt is mainly used to:",
+    "options": [
+      "Answer user questions based on given information",
+      "Create databases",
+      "Run Python scripts",
+      "Deploy applications"
+    ],
+    "answer": "Answer user questions based on given information"
+  },
+  {
+    "question": "Which of the following is an advantage of Prompt Engineering?",
+    "options": [
+      "Improves response accuracy",
+      "Deletes databases",
+      "Reduces internet speed",
+      "Damages AI models"
+    ],
+    "answer": "Improves response accuracy"
+  },
+  {
+    "question": "What is an AI Chatbot?",
+    "options": [
+      "A program that interacts with users through conversation",
+      "A database",
+      "A compiler",
+      "A spreadsheet"
+    ],
+    "answer": "A program that interacts with users through conversation"
+  },
+  {
+    "question": "Which API is commonly used to build AI chatbots?",
+    "options": [
+      "OpenAI API",
+      "Google Maps API",
+      "Weather API",
+      "Camera API"
+    ],
+    "answer": "OpenAI API"
+  },
+  {
+    "question": "Which feature allows a chatbot to answer user questions?",
+    "options": [
+      "Natural Language Processing",
+      "Screen Recording",
+      "Bluetooth",
+      "USB Driver"
+    ],
+    "answer": "Natural Language Processing"
+  },
+  {
+    "question": "OpenAI API allows developers to:",
+    "options": [
+      "Access AI models through code",
+      "Build computer hardware",
+      "Install Windows",
+      "Format hard disks"
+    ],
+    "answer": "Access AI models through code"
+  },
+  {
+    "question": "Which language was primarily used in your class for AI applications?",
+    "options": [
+      "Python",
+      "C",
+      "C++",
+      "PHP"
+    ],
+    "answer": "Python"
+  },
+  {
+    "question": "Which Python library was used to create the chatbot interface?",
+    "options": [
       "Streamlit",
-      "Pandas",
-      "Matplotlib"
+      "NumPy",
+      "Tkinter",
+      "OpenCV"
     ],
     "answer": "Streamlit"
+  },
+  {
+    "question": "What is LangChain?",
+    "options": [
+      "A framework for building LLM applications",
+      "A database",
+      "A compiler",
+      "A browser"
+    ],
+    "answer": "A framework for building LLM applications"
+  },
+  {
+    "question": "Why is LangChain widely used in industry?",
+    "options": [
+      "To build AI applications with LLMs",
+      "To design websites",
+      "To increase CPU speed",
+      "To create operating systems"
+    ],
+    "answer": "To build AI applications with LLMs"
+  },
+  {
+    "question": "LangChain helps developers to:",
+    "options": [
+      "Connect LLMs with external data and tools",
+      "Repair hardware",
+      "Format USB drives",
+      "Increase internet speed"
+    ],
+    "answer": "Connect LLMs with external data and tools"
+  },
+  {
+    "question": "Which project was built using LangChain in the course?",
+    "options": [
+      "Chatbot",
+      "Calculator",
+      "Snake Game",
+      "Attendance System"
+    ],
+    "answer": "Chatbot"
+  },
+  {
+    "question": "What is an embedding in AI?",
+    "options": [
+      "A numerical representation of text",
+      "A Python keyword",
+      "A database table",
+      "A hardware chip"
+    ],
+    "answer": "A numerical representation of text"
+  },
+  {
+    "question": "Why are embeddings useful?",
+    "options": [
+      "They help AI understand text similarity",
+      "They increase monitor size",
+      "They delete files",
+      "They improve battery life"
+    ],
+    "answer": "They help AI understand text similarity"
+  },
+  {
+    "question": "Which database is commonly used to store embeddings?",
+    "options": [
+      "Vector Database",
+      "Excel",
+      "Notepad",
+      "Paint"
+    ],
+    "answer": "Vector Database"
   }
+  ,
+{
+  "question": "What is the main purpose of a Vector Database?",
+  "options": [
+    "Store and search embeddings efficiently",
+    "Store videos",
+    "Run operating systems",
+    "Compile Python code"
+  ],
+  "answer": "Store and search embeddings efficiently"
+},
+{
+  "question": "Embeddings are mainly used for:",
+  "options": [
+    "Semantic search",
+    "Image editing",
+    "File compression",
+    "Network security"
+  ],
+  "answer": "Semantic search"
+},
+{
+  "question": "Document Search AI allows users to:",
+  "options": [
+    "Ask questions from uploaded documents",
+    "Play games",
+    "Edit videos",
+    "Create animations"
+  ],
+  "answer": "Ask questions from uploaded documents"
+},
+{
+  "question": "Which file format was mainly used in the Document Search AI project?",
+  "options": [
+    "PDF",
+    "MP3",
+    "PNG",
+    "EXE"
+  ],
+  "answer": "PDF"
+},
+{
+  "question": "The first step in Document Search AI is:",
+  "options": [
+    "Upload a document",
+    "Restart the computer",
+    "Create a database",
+    "Install Windows"
+  ],
+  "answer": "Upload a document"
+},
+{
+  "question": "What happens after uploading a PDF in Document Search AI?",
+  "options": [
+    "Questions can be asked about its content",
+    "The PDF is deleted",
+    "The computer shuts down",
+    "The PDF is converted into an image"
+  ],
+  "answer": "Questions can be asked about its content"
+},
+{
+  "question": "Resume Screening AI is mainly used to:",
+  "options": [
+    "Evaluate resumes automatically",
+    "Create games",
+    "Browse websites",
+    "Edit images"
+  ],
+  "answer": "Evaluate resumes automatically"
+},
+{
+  "question": "Which feature is included in the Resume Screening project?",
+  "options": [
+    "AI Score",
+    "Weather Prediction",
+    "Music Streaming",
+    "Video Editing"
+  ],
+  "answer": "AI Score"
+},
+{
+  "question": "AI Resume Screening also provides:",
+  "options": [
+    "Feedback on the resume",
+    "Internet speed",
+    "Battery percentage",
+    "Hardware details"
+  ],
+  "answer": "Feedback on the resume"
+},
+{
+  "question": "Which technology was used to deploy the Resume Analyzer?",
+  "options": [
+    "Streamlit",
+    "Excel",
+    "PowerPoint",
+    "Photoshop"
+  ],
+  "answer": "Streamlit"
+},
+{
+  "question": "What is Streamlit mainly used for?",
+  "options": [
+    "Building web applications using Python",
+    "Game development",
+    "Creating databases",
+    "Operating system development"
+  ],
+  "answer": "Building web applications using Python"
+},
+{
+  "question": "Which command is commonly used to run a Streamlit application?",
+  "options": [
+    "streamlit run app.py",
+    "python streamlit.py",
+    "npm start",
+    "java app.java"
+  ],
+  "answer": "streamlit run app.py"
+},
+{
+  "question": "Which of the following is a feature of Streamlit?",
+  "options": [
+    "Fast UI development",
+    "Operating system installation",
+    "Hardware monitoring",
+    "Video rendering"
+  ],
+  "answer": "Fast UI development"
+},
+{
+  "question": "Which deployment concept was discussed in class?",
+  "options": [
+    "Deploying AI web applications",
+    "Installing RAM",
+    "Formatting hard disks",
+    "Repairing hardware"
+  ],
+  "answer": "Deploying AI web applications"
+},
+{
+  "question": "Which project combines document upload and AI question answering?",
+  "options": [
+    "AI Knowledge Assistant",
+    "Calculator",
+    "Library Management",
+    "Attendance System"
+  ],
+  "answer": "AI Knowledge Assistant"
+},
+{
+  "question": "The AI Knowledge Assistant allows users to:",
+  "options": [
+    "Upload documents and ask questions",
+    "Play games",
+    "Record videos",
+    "Create operating systems"
+  ],
+  "answer": "Upload documents and ask questions"
+},
+{
+  "question": "Which technology powers the intelligence of the AI Knowledge Assistant?",
+  "options": [
+    "OpenAI",
+    "Bluetooth",
+    "Wi-Fi",
+    "Excel"
+  ],
+  "answer": "OpenAI"
+},
+{
+  "question": "Which framework helps connect LLMs with external documents?",
+  "options": [
+    "LangChain",
+    "Bootstrap",
+    "React Router",
+    "TensorFlow Lite"
+  ],
+  "answer": "LangChain"
+},
+{
+  "question": "Which component converts text into vectors for searching?",
+  "options": [
+    "Embedding Model",
+    "Database Table",
+    "HTML Parser",
+    "CSS Engine"
+  ],
+  "answer": "Embedding Model"
+},
+{
+  "question": "The combination of Embeddings and Vector Database enables:",
+  "options": [
+    "Semantic document search",
+    "Operating system installation",
+    "Hardware repair",
+    "Photo editing"
+  ],
+  "answer": "Semantic document search"
+}
+,
+{
+  "question": "What is the main purpose of ChatGPT?",
+  "options": [
+    "Generate human-like responses",
+    "Repair hardware",
+    "Create operating systems",
+    "Compile Java code"
+  ],
+  "answer": "Generate human-like responses"
+},
+{
+  "question": "ChatGPT is based on which type of AI model?",
+  "options": [
+    "Large Language Model (LLM)",
+    "Decision Tree",
+    "Linear Regression",
+    "Compiler"
+  ],
+  "answer": "Large Language Model (LLM)"
+},
+{
+  "question": "Which company developed ChatGPT?",
+  "options": [
+    "OpenAI",
+    "Google Maps",
+    "Oracle",
+    "Adobe"
+  ],
+  "answer": "OpenAI"
+},
+{
+  "question": "What is the role of an API in AI applications?",
+  "options": [
+    "Connect applications with AI services",
+    "Increase RAM",
+    "Format hard disk",
+    "Create databases"
+  ],
+  "answer": "Connect applications with AI services"
+},
+{
+  "question": "Which OpenAI API feature generates text responses?",
+  "options": [
+    "Chat Completion",
+    "GPS Tracking",
+    "Image Compression",
+    "Cloud Storage"
+  ],
+  "answer": "Chat Completion"
+},
+{
+  "question": "Which prompting technique is suitable when examples are available?",
+  "options": [
+    "Few-shot Prompting",
+    "Zero-shot Prompting",
+    "Random Prompting",
+    "Manual Prompting"
+  ],
+  "answer": "Few-shot Prompting"
+},
+{
+  "question": "Which prompting technique relies only on instructions?",
+  "options": [
+    "Zero-shot Prompting",
+    "Few-shot Prompting",
+    "Image Prompting",
+    "Video Prompting"
+  ],
+  "answer": "Zero-shot Prompting"
+},
+{
+  "question": "What makes a prompt effective?",
+  "options": [
+    "Clear and specific instructions",
+    "Using random words",
+    "Using only emojis",
+    "Very short unrelated text"
+  ],
+  "answer": "Clear and specific instructions"
+},
+{
+  "question": "Which AI project allows users to upload resumes for evaluation?",
+  "options": [
+    "AI Resume Screening System",
+    "Weather App",
+    "Calculator",
+    "Music Player"
+  ],
+  "answer": "AI Resume Screening System"
+},
+{
+  "question": "Which project allows users to upload PDFs and ask questions?",
+  "options": [
+    "Document Search AI",
+    "Attendance System",
+    "Inventory System",
+    "File Explorer"
+  ],
+  "answer": "Document Search AI"
+},
+{
+  "question": "What is Overfitting in Machine Learning?",
+  "options": [
+    "Model performs well on training data but poorly on new data",
+    "Model works equally on all data",
+    "Model deletes data",
+    "Model increases internet speed"
+  ],
+  "answer": "Model performs well on training data but poorly on new data"
+},
+{
+  "question": "Regression is mainly used to predict:",
+  "options": [
+    "Continuous numerical values",
+    "Categories only",
+    "Images",
+    "Passwords"
+  ],
+  "answer": "Continuous numerical values"
+},
+{
+  "question": "Classification is mainly used to predict:",
+  "options": [
+    "Categories or classes",
+    "Decimal values only",
+    "Hardware failures",
+    "Operating systems"
+  ],
+  "answer": "Categories or classes"
+},
+{
+  "question": "Which is an example of a classification problem?",
+  "options": [
+    "Spam or Not Spam",
+    "House Price Prediction",
+    "Temperature Prediction",
+    "Salary Prediction"
+  ],
+  "answer": "Spam or Not Spam"
+},
+{
+  "question": "Which is an example of a regression problem?",
+  "options": [
+    "Predicting house prices",
+    "Spam Detection",
+    "Face Recognition",
+    "Disease Classification"
+  ],
+  "answer": "Predicting house prices"
+},
+{
+  "question": "Which technology was used throughout the course to build AI web apps?",
+  "options": [
+    "Streamlit",
+    "Android Studio",
+    "Unity",
+    "Photoshop"
+  ],
+  "answer": "Streamlit"
+},
+{
+  "question": "Which combination is used to build a Retrieval-Augmented AI application?",
+  "options": [
+    "LangChain + Embeddings + Vector Database",
+    "HTML + CSS",
+    "Excel + Word",
+    "Java + Swing"
+  ],
+  "answer": "LangChain + Embeddings + Vector Database"
+},
+{
+  "question": "What is the final major project in this course?",
+  "options": [
+    "AI Knowledge Assistant",
+    "Snake Game",
+    "Calculator",
+    "Student Attendance App"
+  ],
+  "answer": "AI Knowledge Assistant"
+},
+{
+  "question": "Which of the following is NOT a technology used in the final project?",
+  "options": [
+    "PHP",
+    "Python",
+    "OpenAI",
+    "LangChain"
+  ],
+  "answer": "PHP"
+},
+{
+  "question": "Which statement best describes Generative AI?",
+  "options": [
+    "AI that creates new content such as text, images or code",
+    "AI that only stores files",
+    "AI that repairs computers",
+    "AI that increases internet speed"
+  ],
+  "answer": "AI that creates new content such as text, images or code"
+}
 ]
