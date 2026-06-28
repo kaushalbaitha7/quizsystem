@@ -1,0 +1,59 @@
+.result-page{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+background:#eef4ff;
+
+padding:20px;
+
+}
+
+.result-card{
+
+background:white;
+
+padding:40px;
+
+border-radius:15px;
+
+width:450px;
+
+max-width:95%;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+.result-card h1{
+
+color:#2563eb;
+
+margin-bottom:20px;
+
+}
+
+.result-card h2{
+
+margin:20px 0;
+
+}
+
+.result-card p{
+
+margin:10px 0;
+
+}
+
+.result-card hr{
+
+margin:20px 0;
+
+}

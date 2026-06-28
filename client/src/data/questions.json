@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "question": "Which keyword is used to define a function in Python?",
+    "options": [
+      "func",
+      "function",
+      "def",
+      "define"
+    ],
+    "answer": "def"
+  },
+  {
+    "id": 2,
+    "question": "Which library is used to build web apps in Python?",
+    "options": [
+      "NumPy",
+      "Streamlit",
+      "Pandas",
+      "Matplotlib"
+    ],
+    "answer": "Streamlit"
+  }
+]

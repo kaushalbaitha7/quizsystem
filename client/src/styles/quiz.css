@@ -1,0 +1,572 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#eef3fb;
+}
+
+/* ===========================
+        PAGE
+=========================== */
+
+.quiz-page{
+    min-height:100vh;
+    padding:20px;
+}
+
+/* ===========================
+        HEADER
+=========================== */
+
+.quiz-header{
+
+    background:#ffffff;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 30px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    margin-bottom:20px;
+
+}
+
+.quiz-header h2{
+
+    color:#2563eb;
+
+    margin-bottom:5px;
+
+}
+
+.quiz-header p{
+
+    color:#666;
+
+}
+
+/* ===========================
+        TIMER
+=========================== */
+
+.timer{
+
+    background:#ef4444;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    min-width:120px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+        PROGRESS
+=========================== */
+
+.progress-container{
+
+    width:100%;
+
+    height:10px;
+
+    background:#dbeafe;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin-bottom:20px;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    background:#2563eb;
+
+    transition:.4s;
+
+}
+
+/* ===========================
+        MAIN LAYOUT
+=========================== */
+
+.quiz-container{
+
+    display:grid;
+
+    grid-template-columns:250px 1fr 260px;
+
+    gap:20px;
+
+}
+
+/* ===========================
+      LEFT PANEL
+=========================== */
+
+.student-panel{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.student-panel h3{
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+.student-panel p{
+
+    margin-top:15px;
+
+    color:#555;
+
+    font-weight:600;
+
+}
+
+.student-panel span{
+
+    color:#111827;
+
+    display:block;
+
+    margin-top:4px;
+
+}
+
+.status-box{
+
+    margin-top:25px;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    background:#eff6ff;
+
+}
+
+/* ===========================
+        CENTER
+=========================== */
+
+.question-section{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.question-section h3{
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+      QUESTION CARD
+=========================== */
+
+.question-card{
+
+    margin-top:10px;
+
+}
+
+.question-card h2{
+
+    font-size:24px;
+
+    margin-bottom:25px;
+
+    color:#1f2937;
+
+}
+
+.option{
+
+    display:block;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    background:#f8fafc;
+
+    border:2px solid transparent;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.option:hover{
+
+    border-color:#2563eb;
+
+    background:#eff6ff;
+
+}
+
+.option input{
+
+    margin-right:10px;
+
+}
+
+/* ===========================
+      NAVIGATION
+=========================== */
+
+.navigation-buttons{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:35px;
+
+}
+
+.previous,
+.next{
+
+    padding:12px 30px;
+
+    border:none;
+
+    border-radius:10px;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.previous{
+
+    background:#64748b;
+
+}
+
+.next{
+
+    background:#2563eb;
+
+}
+
+.previous:hover{
+
+    background:#475569;
+
+}
+
+.next:hover{
+
+    background:#1d4ed8;
+
+}
+
+.previous:disabled,
+.next:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+}
+
+/* ===========================
+      RIGHT PANEL
+=========================== */
+
+.question-palette{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.question-palette h3{
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+      PALETTE GRID
+=========================== */
+
+.palette-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:10px;
+
+}
+
+.palette-btn{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.palette-btn:hover{
+
+    transform:scale(1.08);
+
+}
+
+.current{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.answered{
+
+    background:#22c55e;
+
+    color:white;
+
+}
+
+.unanswered{
+
+    background:#e5e7eb;
+
+}
+
+/* ===========================
+      LEGEND
+=========================== */
+
+.palette-legend{
+
+    margin-top:25px;
+
+}
+
+.legend-item{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:12px;
+
+    font-size:14px;
+
+}
+
+.legend{
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:5px;
+
+    margin-right:10px;
+
+}
+
+.current-box{
+
+    background:#2563eb;
+
+}
+
+.answered-box{
+
+    background:#22c55e;
+
+}
+
+.unanswered-box{
+
+    background:#d1d5db;
+
+}
+
+/* ===========================
+      SUBMIT
+=========================== */
+
+.submit-btn{
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#16a34a;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.submit-btn:hover{
+
+    background:#15803d;
+
+}
+
+/* ===========================
+      MOBILE
+=========================== */
+
+@media(max-width:1100px){
+
+.quiz-container{
+
+grid-template-columns:1fr;
+
+}
+
+.student-panel{
+
+order:1;
+
+}
+
+.question-section{
+
+order:2;
+
+}
+
+.question-palette{
+
+order:3;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.quiz-header{
+
+flex-direction:column;
+
+gap:15px;
+
+text-align:center;
+
+}
+
+.palette-grid{
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+.question-card h2{
+
+font-size:20px;
+
+}
+
+.navigation-buttons{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.previous,
+.next{
+
+width:100%;
+
+}
+
+}
