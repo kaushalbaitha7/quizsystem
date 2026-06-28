@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useCallback } from "react";
 
-function Timer({ onTimeUp }) {
+const TOTAL_TIME = 45 * 60;
 
-    const TOTAL_TIME = 45 * 60;
+function Timer({ onTimeUp }) {
 
     const getRemainingTime = useCallback(() => {
 
@@ -10,7 +10,9 @@ function Timer({ onTimeUp }) {
 
         if (!startTime) return TOTAL_TIME;
 
-        const elapsed = Math.floor((Date.now() - Number(startTime)) / 1000);
+        const elapsed = Math.floor(
+            (Date.now() - Number(startTime)) / 1000
+        );
 
         return Math.max(TOTAL_TIME - elapsed, 0);
 
@@ -50,7 +52,6 @@ function Timer({ onTimeUp }) {
             ⏰ {minutes}:{seconds.toString().padStart(2, "0")}
         </div>
     );
-
 }
 
 export default Timer;
