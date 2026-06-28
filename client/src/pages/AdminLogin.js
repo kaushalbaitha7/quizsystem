@@ -6,12 +6,12 @@ function AdminLogin() {
 
     const navigate = useNavigate();
 
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const [username,setUsername]=useState("");
+    const [password,setPassword]=useState("");
 
-    const login = () => {
+    const login=()=>{
 
-        if(username === "admin" && password === "admin123"){
+        if(username==="admin" && password==="admin123"){
 
             localStorage.setItem("adminLogin","true");
 
@@ -23,9 +23,9 @@ function AdminLogin() {
 
         }
 
-    };
+    }
 
-    return (
+    return(
 
         <div className="admin-login-page">
 
@@ -33,8 +33,8 @@ function AdminLogin() {
 
                 <img
                     src="/logo.png"
-                    alt="logo"
                     className="login-logo"
+                    alt="logo"
                 />
 
                 <h2>Administrator Login</h2>
