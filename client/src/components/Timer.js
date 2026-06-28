@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 function Timer({ onTimeUp }) {
 
     const TOTAL_TIME = 45 * 60;
 
-    const getRemainingTime = () => {
+    const getRemainingTime = useCallback(() => {
 
         const startTime = localStorage.getItem("examStartTime");
 
@@ -14,9 +14,9 @@ function Timer({ onTimeUp }) {
 
         return Math.max(TOTAL_TIME - elapsed, 0);
 
-    };
+    }, []);
 
-    const [timeLeft, setTimeLeft] = useState(getRemainingTime());
+    const [timeLeft, setTimeLeft] = useState(getRemainingTime);
 
     useEffect(() => {
 
@@ -40,19 +40,15 @@ function Timer({ onTimeUp }) {
 
         return () => clearInterval(interval);
 
-    }, [onTimeUp]);
+    }, [getRemainingTime, onTimeUp]);
 
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
 
     return (
-
         <div className="timer">
-
-            ⏰ {minutes}:{seconds < 10 ? "0" + seconds : seconds}
-
+            ⏰ {minutes}:{seconds.toString().padStart(2, "0")}
         </div>
-
     );
 
 }

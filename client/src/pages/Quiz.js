@@ -1,4 +1,5 @@
 import axios from "axios";
+import API_URL from "../config";
 import React, { useState, useEffect } from "react";
 import "../styles/quiz.css";
 import questions from "../data/questions.json";
@@ -109,10 +110,10 @@ function Quiz() {
 
 try {
 
-    await axios.post(
-        "http://localhost:5000/api/submit",
-        result
-    );
+   await axios.post(
+    `${API_URL}/api/submit`,
+    result
+);
 
     console.log("Result Saved");
 
@@ -153,10 +154,10 @@ navigate("/result");
 localStorage.setItem("result", JSON.stringify(result));
 try {
 
-    await axios.post(
-        "http://localhost:5000/api/submit",
-        result
-    );
+   await axios.post(
+    `${API_URL}/api/submit`,
+    result
+);
 
 } catch(err){
 
