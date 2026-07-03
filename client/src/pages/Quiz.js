@@ -380,7 +380,9 @@ navigate("/result");
                 </div>
 
             </div>
-
+<footer className="footer">
+    © 2026 EETIRP LTD. | Empowering Student Innovation
+</footer>
         </div>
 
     );

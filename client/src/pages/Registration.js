@@ -124,10 +124,9 @@ function Registration() {
 
             </div>
 
-            <footer>
-                © 2026 EETIRP LTD <br />
-                Empowering Student Innovation
-            </footer>
+            <footer className="footer">
+    © 2026 EETIRP LTD. | Empowering Student Innovation
+</footer>
 
         </div>
     );
