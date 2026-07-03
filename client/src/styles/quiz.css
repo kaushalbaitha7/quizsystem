@@ -497,6 +497,23 @@ body{
     background:#15803d;
 
 }
+.submit-btn:disabled{
+
+    background:#bdbdbd;
+
+    color:white;
+
+    cursor:not-allowed;
+
+    opacity:.7;
+
+}
+
+.submit-btn:not(:disabled):hover{
+
+    background:#15803d;
+
+}
 
 /* ===========================
       MOBILE

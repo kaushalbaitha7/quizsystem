@@ -180,7 +180,7 @@ navigate("/result");
 
                 <div>
 
-                    <h2>EETIRP Assessment</h2>
+                    <h2>HCLTech Mock Test</h2>
 
                     <p>
                         Candidate :
@@ -366,16 +366,12 @@ navigate("/result");
                     </div>
 
                     <button
-
-                        className="submit-btn"
-
-                        onClick={submitTest}
-
-                    >
-
-                        Submit Assessment
-
-                    </button>
+    className="submit-btn"
+    onClick={submitTest}
+    disabled={Object.keys(answers).length !== totalQuestions}
+>
+    Submit Assessment
+</button>
 
                 </div>
 
