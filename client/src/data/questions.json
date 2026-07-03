@@ -1,7 +1,7 @@
 [
   {
     "question": "Which data structure is primarily used to implement recursion?",
-    "options": ["Queue", "Stack", "Heap", "Linked List"],
+    "options": ["Queue", "Linked List", "Heap", "Stack"],
     "answer": "Stack"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "question": "Which OOP concept allows one interface to have multiple implementations?",
-    "options": ["Inheritance", "Polymorphism", "Encapsulation", "Abstraction"],
+    "options": ["Inheritance", "Abstraction", "Encapsulation", "Polymorphism"],
     "answer": "Polymorphism"
   },
   {
@@ -41,7 +41,7 @@
   },
   {
     "question": "Dynamic Programming mainly uses which technique?",
-    "options": ["Backtracking", "Memoization", "Sorting", "Greedy"],
+    "options": ["Backtracking", "Sorting", "Memoization", "Greedy"],
     "answer": "Memoization"
   },
   {
@@ -76,7 +76,7 @@
   },
   {
     "question": "Which algorithm finds the shortest path in a weighted graph with non-negative edges?",
-    "options": ["Prim", "Kruskal", "Dijkstra", "DFS"],
+    "options": ["Prim", "Kruskal", "DFS", "Dijkstra"],
     "answer": "Dijkstra"
   },
   {
@@ -126,7 +126,7 @@
 },
 {
   "question": "Which graph traversal algorithm uses a Queue?",
-  "options": ["DFS", "BFS", "Topological Sort", "Prim's Algorithm"],
+  "options": ["DFS", "Prim's Algorithm", "Topological Sort", "BFS"],
   "answer": "BFS"
 },
 {
