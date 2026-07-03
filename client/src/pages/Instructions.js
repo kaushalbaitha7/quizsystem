@@ -54,7 +54,7 @@ function Instructions() {
                     alt="logo"
                 />
 
-                <h1>EETIRP Assessment</h1>
+                <h1>HCLTech Mock Test</h1>
 
                 <p className="subtitle">
                     Please verify your details before starting the examination.
