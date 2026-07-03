@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 
-const TOTAL_TIME = 45 * 60;
+const TOTAL_TIME = 60 * 60;
 
 function Timer({ onTimeUp }) {
 
@@ -22,27 +22,29 @@ function Timer({ onTimeUp }) {
 
     useEffect(() => {
 
-        const interval = setInterval(() => {
+    setTimeLeft(getRemainingTime());
 
-            const remaining = getRemainingTime();
+    const interval = setInterval(() => {
 
-            setTimeLeft(remaining);
+        const remaining = getRemainingTime();
 
-            if (remaining <= 0) {
+        setTimeLeft(remaining);
 
-                clearInterval(interval);
+        if (remaining <= 0) {
 
-                localStorage.removeItem("examStartTime");
+            clearInterval(interval);
 
-                onTimeUp();
+            localStorage.removeItem("examStartTime");
 
-            }
+            onTimeUp();
 
-        }, 1000);
+        }
 
-        return () => clearInterval(interval);
+    }, 1000);
 
-    }, [getRemainingTime, onTimeUp]);
+    return () => clearInterval(interval);
+
+}, [getRemainingTime, onTimeUp]);
 
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;

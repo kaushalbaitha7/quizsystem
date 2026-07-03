@@ -35,6 +35,9 @@ function Instructions() {
             return;
         }
 
+        if (!localStorage.getItem("examStartTime")) {
+         localStorage.setItem("examStartTime", Date.now().toString());
+         }
         navigate("/quiz");
 
     };
@@ -101,7 +104,7 @@ function Instructions() {
 
                     <div className="info-box">
                         <FaClock />
-                        <h2>45 Min</h2>
+                        <h2>60 Min</h2>
                         <p>Duration</p>
                     </div>
 
@@ -123,7 +126,7 @@ function Instructions() {
                         <li>No negative marking.</li>
                         <li>You can move using Previous and Next buttons.</li>
                         <li>You can jump to any question using the question palette.</li>
-                        <li>Test will auto-submit after 45 minutes.</li>
+                        <li>Test will auto-submit after 60 minutes.</li>
                         <li>Click Submit once you finish.</li>
                     </ul>
 
@@ -133,6 +136,7 @@ function Instructions() {
 
                     <input
                         type="checkbox"
+                        checked={agree}
                         onChange={(e)=>setAgree(e.target.checked)}
                     />
 
@@ -142,7 +146,11 @@ function Instructions() {
 
                 </div>
 
-                <button onClick={startExam}>
+                <button
+                    onClick={startExam}
+                    disabled={!agree}
+                    className={!agree ? "disabled-btn" : ""}
+                >
                     Start Test
                 </button>
 
