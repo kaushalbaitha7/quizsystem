@@ -1,48 +1,64 @@
-import React from "react";
-import "../styles/result.css";
+<div className="result-card">
 
-function Result() {
+    <h1>Assessment Completed 🎉</h1>
 
-    const result = JSON.parse(localStorage.getItem("result"));
+    <h2>{result.student.name}</h2>
 
-    if (!result) {
-        return (
-            <div style={{padding:"50px"}}>
-                No Result Found
-            </div>
-        );
-    }
+    <p><strong>USN :</strong> {result.student.usn}</p>
 
-    return (
+    <p><strong>College :</strong> {result.student.college}</p>
 
-        <div className="result-page">
+    <p><strong>Branch :</strong> {result.student.branch}</p>
 
-            <div className="result-card">
+    <hr />
 
-                <h1>Assessment Completed 🎉</h1>
+    <h2>Score : {result.score} / {result.total}</h2>
 
-                <h2>{result.student.name}</h2>
+    <h3>{result.percentage}%</h3>
 
-                <p><strong>USN :</strong> {result.student.usn}</p>
+    <p>Submitted Successfully ✅</p>
 
-                <p><strong>College :</strong> {result.student.college}</p>
+    {/* Learning Resources */}
 
-                <p><strong>Branch :</strong> {result.student.branch}</p>
+    <div className="learning-section">
 
-                <hr />
+        <h3>Continue Your Learning</h3>
 
-                <h2>Score : {result.score} / {result.total}</h2>
+        <p>
+            For more learning resources, coding practice and interview preparation,
+            explore our platforms.
+        </p>
 
-                <h3>{result.percentage}%</h3>
+        <div className="resource-links">
 
-                <p>Submitted Successfully</p>
+            <a
+                href="https://eetirpltd.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="resource-card"
+            >
+                <img
+                    src="/eetirp-logo.png"
+                    alt="EETIRP"
+                />
+                <span>Visit EETIRP</span>
+            </a>
 
-            </div>
+            <a
+                href="https://kaurahub.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="resource-card"
+            >
+                <img
+                    src="/kaurahub-logo.png"
+                    alt="KAURAHUB"
+                />
+                <span>Visit KAURAHUB</span>
+            </a>
 
         </div>
 
-    );
+    </div>
 
-}
-
-export default Result;
+</div>

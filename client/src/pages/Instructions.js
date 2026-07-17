@@ -98,19 +98,19 @@ function Instructions() {
 
                     <div className="info-box">
                         <FaBook />
-                        <h2>60</h2>
+                        <h2>30</h2>
                         <p>Questions</p>
                     </div>
 
                     <div className="info-box">
                         <FaClock />
-                        <h2>60 Min</h2>
+                        <h2>15 Min</h2>
                         <p>Duration</p>
                     </div>
 
                     <div className="info-box">
                         <FaCheckCircle />
-                        <h2>60</h2>
+                        <h2>30</h2>
                         <p>Total Marks</p>
                     </div>
 
@@ -126,7 +126,7 @@ function Instructions() {
                         <li>No negative marking.</li>
                         <li>You can move using Previous and Next buttons.</li>
                         <li>You can jump to any question using the question palette.</li>
-                        <li>Test will auto-submit after 60 minutes.</li>
+                        <li>Test will auto-submit after 15 minutes.</li>
                         <li>Click Submit once you finish.</li>
                     </ul>
 

@@ -180,7 +180,7 @@ navigate("/result");
 
                 <div>
 
-                    <h2>HCLTech Mock Test</h2>
+                    <h2>Mock Test</h2>
 
                     <p>
                         Candidate :

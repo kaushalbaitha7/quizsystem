@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 
-const TOTAL_TIME = 60 * 60;
+const TOTAL_TIME = 15 * 60; // 15 minutes
 
 function Timer({ onTimeUp }) {
 

@@ -52,7 +52,7 @@ function Registration() {
                     className="logo"
                 />
 
-                <h1>HCLTech Mock Test</h1>
+                <h1>Mock Test</h1>
 
                 <p className="subtitle">
                     Online MCQ Examination Portal

@@ -1,422 +1,302 @@
 [
   {
-    "question": "Which data structure is primarily used to implement recursion?",
-    "options": ["Queue", "Linked List", "Heap", "Stack"],
-    "answer": "Stack"
+    "question": "Which of the following statements about Java is TRUE?",
+    "options": [
+      "Java is platform dependent",
+      "Java uses JVM to achieve platform independence",
+      "Java does not support OOP",
+      "Java programs are directly executed by the operating system"
+    ],
+    "answer": "Java uses JVM to achieve platform independence"
   },
   {
-    "question": "Which SQL clause is used to filter grouped records?",
-    "options": ["WHERE", "ORDER BY", "HAVING", "LIMIT"],
-    "answer": "HAVING"
+    "question": "Which of the following is NOT a valid Java identifier?",
+    "options": [
+      "_student",
+      "student1",
+      "1student",
+      "$student"
+    ],
+    "answer": "1student"
   },
   {
-    "question": "What is the worst-case time complexity of Binary Search?",
-    "options": ["O(log n)", "O(n)", "O(n²)", "O(1)"],
-    "answer": "O(log n)"
+    "question": "What will be the output?\n\nint x = 5;\nSystem.out.println(x++ + ++x);",
+    "options": [
+      "11",
+      "12",
+      "13",
+      "10"
+    ],
+    "answer": "12"
   },
   {
-    "question": "Which tree traversal follows Root → Left → Right?",
-    "options": ["Inorder", "Postorder", "Preorder", "Level Order"],
-    "answer": "Preorder"
+    "question": "Which operator is used to compare two object references in Java?",
+    "options": [
+      "==",
+      "=",
+      "equals",
+      "compareTo"
+    ],
+    "answer": "=="
   },
   {
-    "question": "Which OOP concept allows one interface to have multiple implementations?",
-    "options": ["Inheritance", "Abstraction", "Encapsulation", "Polymorphism"],
+    "question": "Which OOP principle allows the same method to perform different tasks based on parameters?",
+    "options": [
+      "Inheritance",
+      "Encapsulation",
+      "Polymorphism",
+      "Abstraction"
+    ],
     "answer": "Polymorphism"
   },
   {
-    "question": "Which sorting algorithm is stable?",
-    "options": ["Merge Sort", "Quick Sort", "Heap Sort", "Selection Sort"],
+    "question": "Which keyword is used to inherit a class in Java?",
+    "options": [
+      "implements",
+      "extends",
+      "inherits",
+      "super"
+    ],
+    "answer": "extends"
+  },
+  {
+    "question": "What is the default value of an instance variable of type int?",
+    "options": [
+      "0",
+      "1",
+      "null",
+      "-1"
+    ],
+    "answer": "0"
+  },
+  {
+    "question": "Which statement about arrays in Java is TRUE?",
+    "options": [
+      "Arrays can store different data types together.",
+      "Array size can be changed after creation.",
+      "Array indexing starts from 0.",
+      "Arrays automatically resize."
+    ],
+    "answer": "Array indexing starts from 0."
+  },
+  {
+    "question": "Which loop is guaranteed to execute at least once?",
+    "options": [
+      "for",
+      "while",
+      "do-while",
+      "enhanced for"
+    ],
+    "answer": "do-while"
+  },
+  {
+    "question": "Which of the following best describes Encapsulation?",
+    "options": [
+      "Hiding implementation details and exposing only required functionality",
+      "Combining data and methods into a single unit while restricting direct access",
+      "Creating multiple objects from one class",
+      "Writing methods with the same name"
+    ],
+    "answer": "Combining data and methods into a single unit while restricting direct access"
+  },
+  {
+    "question": "Which of the following is the correct way to declare an integer array of size 5 in Java?",
+    "options": [
+      "int arr = new int[5];",
+      "int[] arr = new int[5];",
+      "array<int> arr = new int[5];",
+      "int arr[] = 5;"
+    ],
+    "answer": "int[] arr = new int[5];"
+  },
+  {
+    "question": "What will arr.length return for an array declared as int[] arr = new int[10];?",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "0"
+    ],
+    "answer": "10"
+  },
+  {
+    "question": "Which searching algorithm works only on sorted arrays?",
+    "options": [
+      "Linear Search",
+      "Sequential Search",
+      "Binary Search",
+      "Jump Search"
+    ],
+    "answer": "Binary Search"
+  },
+  {
+    "question": "What is the worst-case time complexity of Linear Search?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(1)"
+    ],
+    "answer": "O(n)"
+  },
+  {
+    "question": "What is the worst-case time complexity of Binary Search?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n²)"
+    ],
+    "answer": "O(log n)"
+  },
+  {
+    "question": "Which sorting algorithm repeatedly compares adjacent elements and swaps them if necessary?",
+    "options": [
+      "Selection Sort",
+      "Insertion Sort",
+      "Bubble Sort",
+      "Merge Sort"
+    ],
+    "answer": "Bubble Sort"
+  },
+  {
+    "question": "In Selection Sort, after each pass, what is placed in its correct position?",
+    "options": [
+      "Largest remaining element",
+      "Middle element",
+      "Smallest remaining element",
+      "Random element"
+    ],
+    "answer": "Smallest remaining element"
+  },
+  {
+    "question": "Which sorting algorithm is generally more efficient than Bubble Sort for large datasets?",
+    "options": [
+      "Merge Sort",
+      "Bubble Sort",
+      "Selection Sort",
+      "Linear Sort"
+    ],
     "answer": "Merge Sort"
   },
   {
-    "question": "Which data structure is used in Breadth First Search (BFS)?",
-    "options": ["Queue", "Stack", "Tree", "Heap"],
+    "question": "Which statement about arrays is TRUE?",
+    "options": [
+      "Arrays can store elements of different data types.",
+      "Arrays are dynamically resized by default.",
+      "Array elements are stored in contiguous memory.",
+      "Arrays always store objects only."
+    ],
+    "answer": "Array elements are stored in contiguous memory."
+  },
+  {
+    "question": "If an element is not found using Binary Search, what is the typical result?",
+    "options": [
+      "0",
+      "-1",
+      "1",
+      "The last index"
+    ],
+    "answer": "-1"
+  },
+  {
+    "question": "Which data structure follows the Last In First Out (LIFO) principle?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Linked List",
+      "ArrayList"
+    ],
+    "answer": "Stack"
+  },
+  {
+    "question": "Which operation is used to insert an element into a Stack?",
+    "options": [
+      "enqueue()",
+      "offer()",
+      "push()",
+      "addLast()"
+    ],
+    "answer": "push()"
+  },
+  {
+    "question": "Which data structure follows the First In First Out (FIFO) principle?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Tree",
+      "HashSet"
+    ],
     "answer": "Queue"
   },
   {
-    "question": "Which keyword is used to create an object in Java?",
-    "options": ["class", "new", "this", "static"],
-    "answer": "new"
-  },
-  {
-    "question": "Dynamic Programming mainly uses which technique?",
-    "options": ["Backtracking", "Sorting", "Memoization", "Greedy"],
-    "answer": "Memoization"
-  },
-  {
-    "question": "Which SQL statement is used to retrieve records?",
-    "options": ["DELETE", "SELECT", "UPDATE", "INSERT"],
-    "answer": "SELECT"
-  },
-  {
-    "question": "Which of the following is a valid bracket sequence?",
-    "options": ["({[]})", "([)]", "{(})", "((]"],
-    "answer": "({[]})"
-  },
-  {
-    "question": "What is the worst-case complexity of Bubble Sort?",
-    "options": ["O(n)", "O(log n)", "O(n²)", "O(n log n)"],
-    "answer": "O(n²)"
-  },
-  {
-    "question": "Which data structure is commonly used in implementing an LRU Cache?",
-    "options": ["Queue", "Stack", "HashMap + Doubly Linked List", "Binary Tree"],
-    "answer": "HashMap + Doubly Linked List"
-  },
-  {
-    "question": "In a Binary Search Tree (BST), which condition is always true?",
+    "question": "Which Queue method retrieves and removes the front element?",
     "options": [
-      "Left subtree values are smaller than root",
-      "Root is always the largest",
-      "Right subtree values are smaller",
-      "All leaves are equal"
+      "peek()",
+      "poll()",
+      "push()",
+      "pop()"
     ],
-    "answer": "Left subtree values are smaller than root"
+    "answer": "poll()"
   },
   {
-    "question": "Which algorithm finds the shortest path in a weighted graph with non-negative edges?",
-    "options": ["Prim", "Kruskal", "DFS", "Dijkstra"],
-    "answer": "Dijkstra"
-  },
-  {
-    "question": "Which SQL JOIN returns only matching records from both tables?",
-    "options": ["LEFT JOIN", "INNER JOIN", "RIGHT JOIN", "FULL JOIN"],
-    "answer": "INNER JOIN"
-  },
-  {
-    "question": "Which technique is commonly used to check whether a string is a palindrome?",
+    "question": "What is the time complexity of inserting a node at the beginning of a singly linked list?",
     "options": [
-      "Sorting characters",
-      "Using two pointers",
-      "Hashing only",
-      "Recursion only"
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n²)"
     ],
-    "answer": "Using two pointers"
-  },
-  {
-    "question": "Factorial of a number is most commonly implemented using:",
-    "options": ["Queue", "Heap", "Recursion", "Hash Table"],
-    "answer": "Recursion"
-  },
-  {
-    "question": "Which data structure follows the FIFO principle?",
-    "options": ["Stack", "Queue", "Heap", "Tree"],
-    "answer": "Queue"
-  },
-  {
-    "question": "What is the average time complexity of searching in a HashMap?",
-    "options": ["O(n)", "O(log n)", "O(1)", "O(n²)"],
     "answer": "O(1)"
   },
-{
-  "question": "Which algorithm is commonly used to find the Minimum Spanning Tree (MST)?",
-  "options": ["Kruskal Algorithm", "Dijkstra Algorithm", "Binary Search", "DFS"],
-  "answer": "Kruskal Algorithm"
-},
-{
-  "question": "Which data structure is best suited for evaluating postfix expressions?",
-  "options": ["Queue", "Array", "Stack", "Trie"],
-  "answer": "Stack"
-},
-{
-  "question": "Which SQL function returns the total number of records?",
-  "options": ["SUM()", "COUNT()", "AVG()", "MAX()"],
-  "answer": "COUNT()"
-},
-{
-  "question": "Which graph traversal algorithm uses a Queue?",
-  "options": ["DFS", "Prim's Algorithm", "Topological Sort", "BFS"],
-  "answer": "BFS"
-},
-{
-  "question": "Binary Search can be applied only when the array is:",
-  "options": ["Random", "Sorted", "Circular", "Unique"],
-  "answer": "Sorted"
-},
-{
-  "question": "Which string matching algorithm improves searching efficiency?",
-  "options": ["Merge Sort", "Quick Sort", "KMP Algorithm", "Bubble Sort"],
-  "answer": "KMP Algorithm"
-},
-{
-  "question": "Which OOP concept hides implementation details from the user?",
-  "options": ["Abstraction", "Inheritance", "Composition", "Aggregation"],
-  "answer": "Abstraction"
-},
-{
-  "question": "Which notation represents the worst-case complexity?",
-  "options": ["Θ", "Ω", "O", "α"],
-  "answer": "O"
-},
-{
-  "question": "Which SQL clause arranges the result in ascending or descending order?",
-  "options": ["GROUP BY", "HAVING", "ORDER BY", "DISTINCT"],
-  "answer": "ORDER BY"
-},
-{
-  "question": "Which data structure is mainly used for autocomplete suggestions?",
-  "options": ["Trie", "Queue", "Stack", "Heap"],
-  "answer": "Trie"
-},
-{
-  "question": "Dynamic Programming is mainly applicable when a problem has:",
-  "options": [
-    "Overlapping subproblems",
-    "Only recursion",
-    "Only sorting",
-    "Only loops"
-  ],
-  "answer": "Overlapping subproblems"
-},
-{
-  "question": "Which graph traversal naturally uses recursion?",
-  "options": ["BFS", "DFS", "Level Order", "Topological Sort"],
-  "answer": "DFS"
-},
-{
-  "question": "Which sorting algorithm has an average time complexity of O(n log n)?",
-  "options": ["Insertion Sort", "Selection Sort", "Quick Sort", "Bubble Sort"],
-  "answer": "Quick Sort"
-},
-{
-  "question": "On average, searching in a Hash Table takes:",
-  "options": ["O(log n)", "O(1)", "O(n)", "O(n²)"],
-  "answer": "O(1)"
-},
-{
-  "question": "Which SQL keyword removes duplicate rows from the result?",
-  "options": ["GROUP", "FILTER", "UNIQUE", "DISTINCT"],
-  "answer": "DISTINCT"
-},
-{
-  "question": "Which linked list allows traversal in both forward and backward directions?",
-  "options": [
-    "Circular Linked List",
-    "Doubly Linked List",
-    "Singly Linked List",
-    "Static List"
-  ],
-  "answer": "Doubly Linked List"
-},
-{
-  "question": "Which traversal of a Binary Search Tree gives elements in sorted order?",
-  "options": ["Postorder", "Level Order", "Preorder", "Inorder"],
-  "answer": "Inorder"
-},
-{
-  "question": "Which algorithmic technique is commonly used to solve the N-Queens problem?",
-  "options": ["Backtracking", "Greedy", "Hashing", "Divide and Conquer"],
-  "answer": "Backtracking"
-},
-{
-  "question": "Which data structure efficiently detects cycles while implementing Kruskal's Algorithm?",
-  "options": ["Queue", "Union-Find (Disjoint Set)", "Trie", "Stack"],
-  "answer": "Union-Find (Disjoint Set)"
-},
-{
-  "question": "Which SQL JOIN returns all records from both tables, matching where possible?",
-  "options": ["LEFT JOIN", "INNER JOIN", "RIGHT JOIN", "FULL OUTER JOIN"],
-  "answer": "FULL OUTER JOIN"
-},
-{
-  "question": "Which data structure is used to optimize Dijkstra's Algorithm?",
-  "options": [
-    "Priority Queue",
-    "Queue",
-    "Stack",
-    "Linked List"
-  ],
-  "answer": "Priority Queue"
-},
-{
-  "question": "Which SQL constraint ensures that duplicate values are not allowed?",
-  "options": [
-    "CHECK",
-    "DEFAULT",
-    "UNIQUE",
-    "INDEX"
-  ],
-  "answer": "UNIQUE"
-},
-{
-  "question": "Which sorting algorithm is generally considered an in-place sorting algorithm?",
-  "options": [
-    "Merge Sort",
-    "Quick Sort",
-    "Counting Sort",
-    "Radix Sort"
-  ],
-  "answer": "Quick Sort"
-},
-{
-  "question": "Which tree traversal visits nodes level by level?",
-  "options": [
-    "Preorder",
-    "Postorder",
-    "Level Order",
-    "Inorder"
-  ],
-  "answer": "Level Order"
-},
-{
-  "question": "Which OOP concept allows the same method to behave differently for different objects?",
-  "options": [
-    "Inheritance",
-    "Polymorphism",
-    "Encapsulation",
-    "Abstraction"
-  ],
-  "answer": "Polymorphism"
-},
-{
-  "question": "Topological Sorting is applicable only for:",
-  "options": [
-    "Binary Trees",
-    "Directed Acyclic Graphs",
-    "Undirected Graphs",
-    "Linked Lists"
-  ],
-  "answer": "Directed Acyclic Graphs"
-},
-{
-  "question": "The average search complexity in an AVL Tree is:",
-  "options": [
-    "O(n)",
-    "O(log n)",
-    "O(1)",
-    "O(n²)"
-  ],
-  "answer": "O(log n)"
-},
-{
-  "question": "Which SQL clause filters groups after GROUP BY?",
-  "options": [
-    "WHERE",
-    "HAVING",
-    "ORDER BY",
-    "LIMIT"
-  ],
-  "answer": "HAVING"
-},
-{
-  "question": "Memoization is mainly associated with:",
-  "options": [
-    "Dynamic Programming",
-    "Greedy Algorithm",
-    "Sorting",
-    "Searching"
-  ],
-  "answer": "Dynamic Programming"
-},
-{
-  "question": "Which data structure is commonly used to implement Undo operations?",
-  "options": [
-    "Queue",
-    "Stack",
-    "Heap",
-    "Trie"
-  ],
-  "answer": "Stack"
-},
-{
-  "question": "Which algorithm is commonly used to detect cycles in a directed graph?",
-  "options": [
-    "DFS",
-    "Binary Search",
-    "Bubble Sort",
-    "Selection Sort"
-  ],
-  "answer": "DFS"
-},
-{
-  "question": "Which OOP feature protects data by restricting direct access?",
-  "options": [
-    "Inheritance",
-    "Encapsulation",
-    "Aggregation",
-    "Composition"
-  ],
-  "answer": "Encapsulation"
-},
-{
-  "question": "Which SQL statement is used to modify existing records?",
-  "options": [
-    "INSERT",
-    "UPDATE",
-    "DELETE",
-    "CREATE"
-  ],
-  "answer": "UPDATE"
-},
-{
-  "question": "Which traversal of a Binary Search Tree produces values in ascending order?",
-  "options": [
-    "Inorder",
-    "Preorder",
-    "Postorder",
-    "Level Order"
-  ],
-  "answer": "Inorder"
-},
-{
-  "question": "Which algorithmic strategy divides a problem into smaller subproblems and combines their solutions?",
-  "options": [
-    "Greedy",
-    "Divide and Conquer",
-    "Backtracking",
-    "Branch and Bound"
-  ],
-  "answer": "Divide and Conquer"
-},
-{
-  "question": "Which time complexity is considered most efficient among the following for large inputs?",
-  "options": [
-    "O(n²)",
-    "O(n log n)",
-    "O(2ⁿ)",
-    "O(n³)"
-  ],
-  "answer": "O(n log n)"
-},
-{
-  "question": "Which data structure follows the Last In First Out (LIFO) principle?",
-  "options": [
-    "Queue",
-    "Stack",
-    "Deque",
-    "Tree"
-  ],
-  "answer": "Stack"
-},
-{
-  "question": "Which SQL JOIN returns all rows from the left table and matching rows from the right table?",
-  "options": [
-    "INNER JOIN",
-    "LEFT JOIN",
-    "RIGHT JOIN",
-    "FULL OUTER JOIN"
-  ],
-  "answer": "LEFT JOIN"
-},
-{
-  "question": "Which tree automatically maintains its height balance after insertions and deletions?",
-  "options": [
-    "Binary Tree",
-    "AVL Tree",
-    "Trie",
-    "Expression Tree"
-  ],
-  "answer": "AVL Tree"
-},
-{
-  "question": "Which software engineering principle improves maintainability by dividing a program into independent components?",
-  "options": [
-    "Hard Coding",
-    "Modularity",
-    "Global Variables",
-    "Code Duplication"
-  ],
-  "answer": "Modularity"
-}
+  {
+    "question": "Which Java Collection allows duplicate elements and maintains insertion order?",
+    "options": [
+      "HashSet",
+      "TreeSet",
+      "ArrayList",
+      "HashMap"
+    ],
+    "answer": "ArrayList"
+  },
+  {
+    "question": "Which Java Collection stores unique elements without guaranteeing insertion order?",
+    "options": [
+      "LinkedHashSet",
+      "HashSet",
+      "ArrayList",
+      "Vector"
+    ],
+    "answer": "HashSet"
+  },
+  {
+    "question": "Which Java Collection stores data as key-value pairs?",
+    "options": [
+      "ArrayList",
+      "LinkedList",
+      "HashMap",
+      "HashSet"
+    ],
+    "answer": "HashMap"
+  },
+  {
+    "question": "Which Collection automatically stores elements in sorted ascending order?",
+    "options": [
+      "HashSet",
+      "TreeSet",
+      "LinkedHashSet",
+      "ArrayList"
+    ],
+    "answer": "TreeSet"
+  },
+  {
+    "question": "Which implementation is generally preferred over the legacy Stack class in modern Java?",
+    "options": [
+      "Vector",
+      "ArrayDeque",
+      "LinkedHashMap",
+      "PriorityQueue"
+    ],
+    "answer": "ArrayDeque"
+  }
 ]
