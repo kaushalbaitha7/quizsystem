@@ -1,64 +1,88 @@
-<div className="result-card">
+import React from "react";
+import "../styles/result.css";
 
-    <h1>Assessment Completed 🎉</h1>
+function Result() {
 
-    <h2>{result.student.name}</h2>
+    const result = JSON.parse(localStorage.getItem("result"));
 
-    <p><strong>USN :</strong> {result.student.usn}</p>
+    if (!result) {
+        return (
+            <div style={{ padding: "50px" }}>
+                No Result Found
+            </div>
+        );
+    }
 
-    <p><strong>College :</strong> {result.student.college}</p>
+    return (
 
-    <p><strong>Branch :</strong> {result.student.branch}</p>
+        <div className="result-page">
 
-    <hr />
+            <div className="result-card">
 
-    <h2>Score : {result.score} / {result.total}</h2>
+                <h1>Assessment Completed 🎉</h1>
 
-    <h3>{result.percentage}%</h3>
+                <h2>{result.student.name}</h2>
 
-    <p>Submitted Successfully ✅</p>
+                <p><strong>USN :</strong> {result.student.usn}</p>
 
-    {/* Learning Resources */}
+                <p><strong>College :</strong> {result.student.college}</p>
 
-    <div className="learning-section">
+                <p><strong>Branch :</strong> {result.student.branch}</p>
 
-        <h3>Continue Your Learning</h3>
+                <hr />
 
-        <p>
-            For more learning resources, coding practice and interview preparation,
-            explore our platforms.
-        </p>
+                <h2>Score : {result.score} / {result.total}</h2>
 
-        <div className="resource-links">
+                <h3>{result.percentage}%</h3>
 
-            <a
-                href="https://eetirpltd.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="resource-card"
-            >
-                <img
-                    src="/eetirp-logo.png"
-                    alt="EETIRP"
-                />
-                <span>Visit EETIRP</span>
-            </a>
+                <p>Submitted Successfully ✅</p>
 
-            <a
-                href="https://kaurahub.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="resource-card"
-            >
-                <img
-                    src="/kaurahub-logo.png"
-                    alt="KAURAHUB"
-                />
-                <span>Visit KAURAHUB</span>
-            </a>
+                <div className="learning-section">
+
+                    <h3>Continue Your Learning</h3>
+
+                    <p>
+                        For more learning resources, coding practice and interview preparation,
+                        explore our platforms.
+                    </p>
+
+                    <div className="resource-links">
+
+                        <a
+                            href="https://eetirpltd.vercel.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="resource-card"
+                        >
+                            <img
+                                src="/eetirp-logo.png"
+                                alt="EETIRP"
+                            />
+                            <span>Visit EETIRP</span>
+                        </a>
+
+                        <a
+                            href="https://kaurahub.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="resource-card"
+                        >
+                            <img
+                                src="/kaurahub-logo.png"
+                                alt="KAURAHUB"
+                            />
+                            <span>Visit KAURAHUB</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </div>
+    );
+}
 
-</div>
+export default Result;
