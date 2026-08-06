@@ -38,13 +38,11 @@ function TestSelection() {
 
                         <h2>Test 1</h2>
 
-                        <p>Java Fundamentals</p>
-
-                        <span>Days 1 - 5</span>
+                        <p>Java Basics 1</p>
 
                         <div className="test-info">
 
-                            <span>30 Questions</span>
+                            <span>20 Questions</span>
 
                             <span>15 Minutes</span>
 
@@ -62,13 +60,12 @@ function TestSelection() {
 
                         <h2>Test 2</h2>
 
-                        <p>Java DSA</p>
+                        <p>Java Fundamentals 1</p>
 
-                        <span>Days 6 - 10</span>
 
                         <div className="test-info">
 
-                            <span>30 Questions</span>
+                            <span>20 Questions</span>
 
                             <span>15 Minutes</span>
 
