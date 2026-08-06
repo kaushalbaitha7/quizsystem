@@ -38,7 +38,7 @@ function Registration() {
 
         localStorage.setItem("student", JSON.stringify(student));
 
-        navigate("/instructions");
+        navigate("/tests");
     };
 
     return (

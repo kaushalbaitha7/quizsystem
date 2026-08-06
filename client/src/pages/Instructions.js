@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import "../styles/instructions.css";
 import { useNavigate } from "react-router-dom";
 import {
-  FaClock,
-  FaBook,
-  FaCheckCircle,
-  FaUserGraduate
+    FaClock,
+    FaBook,
+    FaCheckCircle,
+    FaUserGraduate
 } from "react-icons/fa";
 
 function Instructions() {
@@ -13,8 +13,26 @@ function Instructions() {
     const navigate = useNavigate();
 
     const [student, setStudent] = useState({});
-
     const [agree, setAgree] = useState(false);
+
+    const selectedTest = localStorage.getItem("selectedTest");
+
+    const testDetails = {
+        test1: {
+            title: "Mock Test 1",
+            questions: 30,
+            duration: "15 Min",
+            marks: 30
+        },
+        test2: {
+            title: "Mock Test 2",
+            questions: 30,
+            duration: "15 Min",
+            marks: 30
+        }
+    };
+
+    const currentTest = testDetails[selectedTest] || testDetails.test1;
 
     useEffect(() => {
 
@@ -22,6 +40,7 @@ function Instructions() {
 
         if (!data) {
             navigate("/");
+            return;
         }
 
         setStudent(data);
@@ -36,8 +55,9 @@ function Instructions() {
         }
 
         if (!localStorage.getItem("examStartTime")) {
-         localStorage.setItem("examStartTime", Date.now().toString());
-         }
+            localStorage.setItem("examStartTime", Date.now().toString());
+        }
+
         navigate("/quiz");
 
     };
@@ -54,7 +74,7 @@ function Instructions() {
                     alt="logo"
                 />
 
-                <h1>Mock Test</h1>
+                <h1>{currentTest.title}</h1>
 
                 <p className="subtitle">
                     Please verify your details before starting the examination.
@@ -98,19 +118,19 @@ function Instructions() {
 
                     <div className="info-box">
                         <FaBook />
-                        <h2>30</h2>
+                        <h2>{currentTest.questions}</h2>
                         <p>Questions</p>
                     </div>
 
                     <div className="info-box">
                         <FaClock />
-                        <h2>15 Min</h2>
+                        <h2>{currentTest.duration}</h2>
                         <p>Duration</p>
                     </div>
 
                     <div className="info-box">
                         <FaCheckCircle />
-                        <h2>30</h2>
+                        <h2>{currentTest.marks}</h2>
                         <p>Total Marks</p>
                     </div>
 
@@ -126,7 +146,7 @@ function Instructions() {
                         <li>No negative marking.</li>
                         <li>You can move using Previous and Next buttons.</li>
                         <li>You can jump to any question using the question palette.</li>
-                        <li>Test will auto-submit after 15 minutes.</li>
+                        <li>Test will auto-submit after {currentTest.duration}.</li>
                         <li>Click Submit once you finish.</li>
                     </ul>
 
@@ -137,7 +157,7 @@ function Instructions() {
                     <input
                         type="checkbox"
                         checked={agree}
-                        onChange={(e)=>setAgree(e.target.checked)}
+                        onChange={(e) => setAgree(e.target.checked)}
                     />
 
                     <label>
@@ -155,9 +175,11 @@ function Instructions() {
                 </button>
 
             </div>
-<footer className="footer">
-    © 2026 EETIRP LTD. | Empowering Student Innovation
-</footer>
+
+            <footer className="footer">
+                © 2026 EETIRP LTD. | Empowering Student Innovation
+            </footer>
+
         </div>
 
     );

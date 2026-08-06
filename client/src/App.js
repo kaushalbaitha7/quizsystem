@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Registration from "./pages/Registration";
+import TestSelection from "./pages/TestSelection";
 import Instructions from "./pages/Instructions";
 import Quiz from "./pages/Quiz";
 import Result from "./pages/Result";
@@ -14,6 +15,7 @@ function App() {
       <Routes>
 
         <Route path="/" element={<Registration />} />
+        <Route path="/tests" element={<TestSelection />} />
         <Route path="/instructions" element={<Instructions />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/result" element={<Result />} />

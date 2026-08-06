@@ -1,9 +1,12 @@
 import axios from "axios";
 import API_URL from "../config";
 import React, { useState, useEffect } from "react";
-import "../styles/quiz.css";
-import questions from "../data/questions.json";
 import { useNavigate } from "react-router-dom";
+
+import "../styles/quiz.css";
+
+import test1 from "../data/test1.json";
+import test2 from "../data/test2.json";
 
 import Timer from "../components/Timer";
 import ProgressBar from "../components/ProgressBar";
@@ -15,6 +18,19 @@ function Quiz() {
 
     const student = JSON.parse(localStorage.getItem("student"));
 
+    const selectedTest = localStorage.getItem("selectedTest");
+
+    const questions =
+        selectedTest === "test2"
+            ? test2
+            : test1;
+
+    const totalQuestions = questions.length;
+
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [answers, setAnswers] = useState({});
+    const [submitted, setSubmitted] = useState(false);
+
     useEffect(() => {
 
         if (!student) {
@@ -23,13 +39,6 @@ function Quiz() {
 
     }, [navigate, student]);
 
-    const totalQuestions = questions.length;
-
-    const [currentQuestion, setCurrentQuestion] = useState(0);
-
-    const [answers, setAnswers] = useState({});
-
-    const [submitted, setSubmitted] = useState(false);
 
     const handleAnswer = (option) => {
 
@@ -180,7 +189,11 @@ navigate("/result");
 
                 <div>
 
-                    <h2>Mock Test</h2>
+                    <h2>
+    {selectedTest === "test2"
+        ? "Mock Test 2"
+        : "Mock Test 1"}
+</h2>
 
                     <p>
                         Candidate :
