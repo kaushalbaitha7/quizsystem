@@ -101,19 +101,21 @@ function Quiz() {
 
         const result = {
 
-            student,
+    student,
 
-            score,
+    testName: selectedTest,
 
-            total: totalQuestions,
+    score,
 
-            percentage: ((score / totalQuestions) * 100).toFixed(2),
+    total: totalQuestions,
 
-            answers,
+    percentage: ((score / totalQuestions) * 100).toFixed(2),
 
-            submittedAt: new Date().toLocaleString()
+    answers,
 
-        };
+    submittedAt: new Date().toLocaleString()
+
+};
 
         localStorage.setItem("result", JSON.stringify(result));
 
@@ -148,6 +150,8 @@ navigate("/result");
 
     student,
 
+    testName: selectedTest,
+
     score,
 
     total: totalQuestions,
@@ -159,7 +163,6 @@ navigate("/result");
     submittedAt: new Date().toLocaleString()
 
 };
-
 localStorage.setItem("result", JSON.stringify(result));
 try {
 

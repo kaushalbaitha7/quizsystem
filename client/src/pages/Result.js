@@ -19,9 +19,15 @@ function Result() {
 
             <div className="result-card">
 
-                <h1>Assessment Completed 🎉</h1>
+                <h1>Congratulations! Assessment Completed🎉</h1>
 
                 <h2>{result.student.name}</h2>
+                <p>
+    <strong>Assessment :</strong>{" "}
+    {result.testName === "test2"
+        ? "Mock Test 2"
+        : "Mock Test 1"}
+</p>
 
                 <p><strong>USN :</strong> {result.student.usn}</p>
 

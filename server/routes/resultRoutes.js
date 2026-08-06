@@ -7,119 +7,164 @@ const Result = require("../models/Result");
 // ==============================
 // Save Result
 // ==============================
+
 router.post("/submit", async (req, res) => {
-  try {
-    const result = new Result(req.body);
 
-    await result.save();
+    try {
 
-    res.json({
-      success: true,
-      message: "Result Saved Successfully",
-    });
+        const result = new Result(req.body);
 
-  } catch (err) {
+        await result.save();
 
-    console.log(err);
+        res.json({
+            success: true,
+            message: "Result Saved Successfully"
+        });
 
-    res.status(500).json({
-      success: false,
-      message: "Unable to Save Result",
-    });
+    } catch (err) {
 
-  }
+        console.log(err);
+
+        res.status(500).json({
+            success: false,
+            message: "Unable to Save Result"
+        });
+
+    }
+
 });
 
 // ==============================
-// Get All Results
+// Get Results (Filter by Test)
+// Example:
+// /api/results
+// /api/results?test=test1
+// /api/results?test=test2
 // ==============================
+
 router.get("/results", async (req, res) => {
 
-  try {
+    try {
 
-    const results = await Result.find().sort({ _id: -1 });
+        const { test } = req.query;
 
-    res.json(results);
+        let filter = {};
 
-  } catch (err) {
+        if (test && test !== "all") {
 
-    res.status(500).json({
-      success: false,
-      message: "Unable to Fetch Results",
-    });
+            filter.testName = test;
 
-  }
+        }
+
+        const results = await Result
+            .find(filter)
+            .sort({ _id: -1 });
+
+        res.json(results);
+
+    } catch (err) {
+
+        console.log(err);
+
+        res.status(500).json({
+            success: false,
+            message: "Unable to Fetch Results"
+        });
+
+    }
 
 });
 
 // ==============================
-// Export Excel
+// Export Excel (Filter by Test)
+// Example:
+// /api/export
+// /api/export?test=test1
+// /api/export?test=test2
 // ==============================
+
 router.get("/export", async (req, res) => {
 
-  try {
+    try {
 
-    const results = await Result.find();
+        const { test } = req.query;
 
-    const excelData = results.map((item) => ({
+        let filter = {};
 
-      Name: item.student.name,
+        if (test && test !== "all") {
 
-      USN: item.student.usn,
+            filter.testName = test;
 
-      College: item.student.college,
+        }
 
-      Branch: item.student.branch,
+        const results = await Result.find(filter);
 
-      Semester: item.student.semester,
+        const excelData = results.map((item) => ({
 
-      Score: item.score,
+            Test: item.testName,
 
-      Total: item.total,
+            Name: item.student.name,
 
-      Percentage: item.percentage + "%",
+            USN: item.student.usn,
 
-      Submitted: item.submittedAt
+            College: item.student.college,
 
-    }));
+            Branch: item.student.branch,
 
-    const workbook = XLSX.utils.book_new();
+            Semester: item.student.semester,
 
-    const worksheet = XLSX.utils.json_to_sheet(excelData);
+            Score: item.score,
 
-    XLSX.utils.book_append_sheet(
-      workbook,
-      worksheet,
-      "Assessment Report"
-    );
+            Total: item.total,
 
-    const buffer = XLSX.write(workbook, {
-      type: "buffer",
-      bookType: "xlsx"
-    });
+            Percentage: item.percentage + "%",
 
-    res.setHeader(
-      "Content-Disposition",
-      "attachment; filename=Python_Streamlit_Assessment_Report.xlsx"
-    );
+            Submitted: item.submittedAt
 
-    res.setHeader(
-      "Content-Type",
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    );
+        }));
 
-    res.send(buffer);
+        const workbook = XLSX.utils.book_new();
 
-  } catch (err) {
+        const worksheet = XLSX.utils.json_to_sheet(excelData);
 
-    console.log(err);
+        XLSX.utils.book_append_sheet(
+            workbook,
+            worksheet,
+            "Assessment Report"
+        );
 
-    res.status(500).json({
-      success: false,
-      message: "Excel Export Failed"
-    });
+        const buffer = XLSX.write(workbook, {
+            type: "buffer",
+            bookType: "xlsx"
+        });
 
-  }
+        const fileName =
+            test && test !== "all"
+                ? `${test}_Assessment_Report.xlsx`
+                : "Assessment_Report.xlsx";
+
+        res.setHeader(
+            "Content-Disposition",
+            `attachment; filename=${fileName}`
+        );
+
+        res.setHeader(
+            "Content-Type",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        );
+
+        res.send(buffer);
+
+    } catch (err) {
+
+        console.log(err);
+
+        res.status(500).json({
+            success: false,
+            message: "Excel Export Failed"
+        });
+
+    }
 
 });
 
