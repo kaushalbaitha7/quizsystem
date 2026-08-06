@@ -476,3 +476,98 @@ padding:18px;
 }
 
 }
+/* ==========================
+        SUBMIT MODAL
+========================== */
+
+.modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(15,23,42,.65);
+    backdrop-filter:blur(6px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:fadeIn .2s ease;
+}
+
+.submit-modal{
+    width:430px;
+    max-width:90%;
+    background:#fff;
+    border-radius:22px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 25px 70px rgba(0,0,0,.25);
+    animation:popup .25s ease;
+}
+
+.submit-modal h2{
+    font-size:30px;
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.submit-modal p{
+    color:#64748b;
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:28px;
+}
+
+.modal-buttons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+}
+
+.modal-buttons button{
+    width:150px;
+    padding:13px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.cancel-btn{
+    background:#e5e7eb;
+    color:#111827;
+}
+
+.cancel-btn:hover{
+    background:#d1d5db;
+}
+
+.confirm-btn{
+    background:#16a34a;
+    color:#fff;
+}
+
+.confirm-btn:hover{
+    background:#15803d;
+    transform:translateY(-2px);
+}
+
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}

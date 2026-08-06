@@ -30,6 +30,7 @@ function Quiz() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [answers, setAnswers] = useState({});
     const [submitted, setSubmitted] = useState(false);
+    const [showSubmitModal, setShowSubmitModal] = useState(false);
 
     useEffect(() => {
 
@@ -90,12 +91,7 @@ function Quiz() {
     const submitTest = async () => {
 
         if (submitted) return;
-
-        const confirmSubmit = window.confirm(
-            "Are you sure you want to submit the assessment?"
-        );
-
-        if (!confirmSubmit) return;
+        setShowSubmitModal(false);
 
         const score = calculateScore();
 
@@ -178,6 +174,7 @@ try {
 }
 
 localStorage.removeItem("examStartTime");
+setShowSubmitModal(false);
 
 navigate("/result");
     };
@@ -381,14 +378,58 @@ navigate("/result");
 
                     </div>
 
-                    <button
+       <button
     className="submit-btn"
-    onClick={submitTest}
     disabled={Object.keys(answers).length !== totalQuestions}
+    onClick={() => setShowSubmitModal(true)}
 >
     Submit Assessment
 </button>
+{showSubmitModal && (
 
+<div
+    className="modal-overlay"
+    onClick={() => setShowSubmitModal(false)}
+>
+
+    <div
+    className="submit-modal"
+    onClick={(e) => e.stopPropagation()}
+>
+
+        <h2>📝 Submit Assessment</h2>
+
+        <p>
+    You have answered all questions successfully.<br/>
+    After submission, your responses cannot be changed.
+</p>
+
+        <div className="modal-buttons">
+
+            <button
+                className="cancel-btn"
+                onClick={() => setShowSubmitModal(false)}
+            >
+                Cancel
+            </button>
+
+            <button
+                className="confirm-btn"
+                onClick={() => {
+                    setShowSubmitModal(false);
+                    submitTest();
+                }}
+            >
+                Submit
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+)}
                 </div>
 
             </div>
