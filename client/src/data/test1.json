@@ -1,0 +1,202 @@
+[
+  {
+    "question": "Java is a",
+    "options": [
+      "Database",
+      "Programming Language",
+      "Browser",
+      "OS"
+    ],
+    "answer": "Programming Language"
+  },
+  {
+    "question": "Java file extension",
+    "options": [
+      ".class",
+      " .java",
+      ".txt",
+      ".exe"
+    ],
+    "answer": " .java"
+  },
+  {
+    "question": "JVM stands for",
+    "options": [
+      "Java Vendor Machine",
+      "Java Variable Method",
+      "Joint VM",
+      "Java Virtual Machine"
+    ],
+    "answer": "Java Virtual Machine"
+  },
+  {
+    "question": "JDK is used for",
+    "options": [
+      "Browsing",
+      "Gaming",
+      "Developing Java programs",
+      "Typing"
+    ],
+    "answer": "Developing Java programs"
+  },
+  {
+    "question": "JRE contains",
+    "options": [
+      "IDE",
+      "JVM",
+      "Compiler only",
+      "Debugger"
+    ],
+    "answer": "JVM"
+  },
+  {
+    "question": "Java is purely OOP?",
+    "options": [
+      "Yes",
+      "Sometimes",
+      "Only Java 8",
+      "No"
+    ],
+    "answer": "No"
+  },
+  {
+    "question": "Which is a primitive type?",
+    "options": [
+      "int",
+      "Scanner",
+      "String",
+      "Array"
+    ],
+    "answer": "int"
+  },
+  {
+    "question": "Which is not primitive?",
+    "options": [
+      "boolean",
+      "String",
+      "char",
+      "double"
+    ],
+    "answer": "String"
+  },
+  {
+    "question": "Keyword to declare variable",
+    "options": [
+      "package",
+      "int",
+      "class",
+      "new"
+    ],
+    "answer": "int"
+  },
+  {
+    "question": "Which loop repeats while condition is true?",
+    "options": [
+      "while",
+      "if",
+      "switch",
+      "break"
+    ],
+    "answer": "while"
+  },
+  {
+    "question": "Loop that runs at least once",
+    "options": [
+      "if",
+      "for",
+      "while",
+      "do-while"
+    ],
+    "answer": "do-while"
+  },
+  {
+    "question": "Decision statement",
+    "options": [
+      "package",
+      "if",
+      "class",
+      "import"
+    ],
+    "answer": "if"
+  },
+  {
+    "question": "Keyword for class variable",
+    "options": [
+      "this",
+      "final",
+      "static",
+      "super"
+    ],
+    "answer": "static"
+  },
+  {
+    "question": "Entry method",
+    "options": [
+      "start()",
+      "main()",
+      "run()",
+      "init()"
+    ],
+    "answer": "main()"
+  },
+  {
+    "question": "Compiler command",
+    "options": [
+      "javac",
+      "jar",
+      "javadoc",
+      "java"
+    ],
+    "answer": "javac"
+  },
+  {
+    "question": "Program execution command",
+    "options": [
+      "jar",
+      "class",
+      "javac",
+      "java"
+    ],
+    "answer": "java"
+  },
+  {
+    "question": "default keyword is used in",
+    "options": [
+      "interface methods",
+      "loops",
+      "constructors",
+      "arrays"
+    ],
+    "answer": "interface methods"
+  },
+  {
+    "question": "yield is used in",
+    "options": [
+      "class",
+      "for loop",
+      "switch expression",
+      "package"
+    ],
+    "answer": "switch expression"
+  },
+  {
+    "question": "Which exits loop",
+    "options": [
+      "break",
+      "new",
+      "continue",
+      "this"
+    ],
+    "answer": "break"
+  },
+  {
+    "question": "Which keyword is used to create an object in Java?",
+    "options": [
+      "this",
+      "super",
+      "new",
+      "class"
+    ],
+    "answer": "new"
+  }
+]

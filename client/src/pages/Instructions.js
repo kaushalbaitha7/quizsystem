@@ -20,15 +20,15 @@ function Instructions() {
     const testDetails = {
         test1: {
             title: "Mock Test 1",
-            questions: 30,
+            questions: 20,
             duration: "15 Min",
-            marks: 30
+            marks: 20
         },
         test2: {
             title: "Mock Test 2",
-            questions: 30,
+            questions: 20,
             duration: "15 Min",
-            marks: 30
+            marks: 20
         }
     };
 

@@ -1,0 +1,202 @@
+[
+  {
+    "question": "Blueprint of object",
+    "options": [
+      "Class",
+      "Package",
+      "Method",
+      "Variable"
+    ],
+    "answer": "Class"
+  },
+  {
+    "question": "Instance of class",
+    "options": [
+      "Method",
+      "Object",
+      "Loop",
+      "Package"
+    ],
+    "answer": "Object"
+  },
+  {
+    "question": "Object is created using",
+    "options": [
+      "super",
+      "class",
+      "new",
+      "this"
+    ],
+    "answer": "new"
+  },
+  {
+    "question": "Special method",
+    "options": [
+      "Setter",
+      "Getter",
+      "main",
+      "Constructor"
+    ],
+    "answer": "Constructor"
+  },
+  {
+    "question": "Constructor name should match",
+    "options": [
+      "Package",
+      "Variable",
+      "Class name",
+      "Method name"
+    ],
+    "answer": "Class name"
+  },
+  {
+    "question": "Constructor return type",
+    "options": [
+      "No return type",
+      "String",
+      "void",
+      "int"
+    ],
+    "answer": "No return type"
+  },
+  {
+    "question": "Method is used to",
+    "options": [
+      "Compile",
+      "Perform task",
+      "Store package",
+      "Create JDK"
+    ],
+    "answer": "Perform task"
+  },
+  {
+    "question": "Data hiding is",
+    "options": [
+      "Inheritance",
+      "Looping",
+      "Casting",
+      "Encapsulation"
+    ],
+    "answer": "Encapsulation"
+  },
+  {
+    "question": "Keyword for inheritance",
+    "options": [
+      "this",
+      "extends",
+      "super",
+      "implements"
+    ],
+    "answer": "extends"
+  },
+  {
+    "question": "Runtime polymorphism uses",
+    "options": [
+      "Method overriding",
+      "Constructor",
+      "Loop",
+      "Method overloading"
+    ],
+    "answer": "Method overriding"
+  },
+  {
+    "question": "Compile-time polymorphism uses",
+    "options": [
+      "Inheritance",
+      "Object",
+      "Method overloading",
+      "Overriding"
+    ],
+    "answer": "Method overloading"
+  },
+  {
+    "question": "Abstraction hides",
+    "options": [
+      "Implementation",
+      "Variables",
+      "Packages",
+      "Loops"
+    ],
+    "answer": "Implementation"
+  },
+  {
+    "question": "Interface keyword",
+    "options": [
+      "interface",
+      "class",
+      "extends",
+      "implements"
+    ],
+    "answer": "interface"
+  },
+  {
+    "question": "Class uses interface with",
+    "options": [
+      "extends",
+      "implements",
+      "super",
+      "this"
+    ],
+    "answer": "implements"
+  },
+  {
+    "question": "Parent constructor",
+    "options": [
+      "super()",
+      "this()",
+      "main()",
+      "new"
+    ],
+    "answer": "super()"
+  },
+  {
+    "question": "Current object",
+    "options": [
+      "static",
+      "final",
+      "super",
+      "this"
+    ],
+    "answer": "this"
+  },
+  {
+    "question": "Current class constructor",
+    "options": [
+      "super()",
+      "main()",
+      "new",
+      "this()"
+    ],
+    "answer": "this()"
+  },
+  {
+    "question": "Can constructors be overloaded?",
+    "options": [
+      "Only once",
+      "Never",
+      "No",
+      "Yes"
+    ],
+    "answer": "Yes"
+  },
+  {
+    "question": "Can abstract class have methods with body?",
+    "options": [
+      "Yes",
+      "Never",
+      "Only static",
+      "No"
+    ],
+    "answer": "Yes"
+  },
+  {
+    "question": "Java supports multiple inheritance through",
+    "options": [
+      "Objects",
+      "Packages",
+      "Interfaces",
+      "Classes"
+    ],
+    "answer": "Interfaces"
+  }
+]
