@@ -4,9 +4,9 @@ const XLSX = require("xlsx");
 
 const Result = require("../models/Result");
 
-// ==============================
+// =====================================
 // Save Result
-// ==============================
+// =====================================
 
 router.post("/submit", async (req, res) => {
 
@@ -34,13 +34,12 @@ router.post("/submit", async (req, res) => {
 
 });
 
-// ==============================
-// Get Results (Filter by Test)
-// Example:
+// =====================================
+// Get Results
 // /api/results
 // /api/results?test=test1
 // /api/results?test=test2
-// ==============================
+// =====================================
 
 router.get("/results", async (req, res) => {
 
@@ -75,13 +74,12 @@ router.get("/results", async (req, res) => {
 
 });
 
-// ==============================
-// Export Excel (Filter by Test)
-// Example:
+// =====================================
+// Export Excel
 // /api/export
 // /api/export?test=test1
 // /api/export?test=test2
-// ==============================
+// =====================================
 
 router.get("/export", async (req, res) => {
 
@@ -101,7 +99,10 @@ router.get("/export", async (req, res) => {
 
         const excelData = results.map((item) => ({
 
-            Test: item.testName,
+            Test:
+                item.testName === "test2"
+                    ? "Mock Test 2"
+                    : "Mock Test 1",
 
             Name: item.student.name,
 
@@ -113,9 +114,7 @@ router.get("/export", async (req, res) => {
 
             Semester: item.student.semester,
 
-            Score: item.score,
-
-            Total: item.total,
+            Score: `${item.score}/${item.total}`,
 
             Percentage: item.percentage + "%",
 
@@ -138,10 +137,17 @@ router.get("/export", async (req, res) => {
             bookType: "xlsx"
         });
 
-        const fileName =
-            test && test !== "all"
-                ? `${test}_Assessment_Report.xlsx`
-                : "Assessment_Report.xlsx";
+        let fileName = "Assessment_Report.xlsx";
+
+        if (test === "test1") {
+
+            fileName = "Mock_Test_1_Report.xlsx";
+
+        } else if (test === "test2") {
+
+            fileName = "Mock_Test_2_Report.xlsx";
+
+        }
 
         res.setHeader(
             "Content-Disposition",
