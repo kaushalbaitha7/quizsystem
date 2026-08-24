@@ -1,9 +1,13 @@
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
-import API_URL from "../config";
-import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import API_URL from "../config";
 import "../styles/quiz.css";
+
+// ==========================================
+// TEST DATA
+// ==========================================
 
 import test1 from "../data/test1.json";
 import test2 from "../data/test2.json";
@@ -18,94 +22,105 @@ import test10 from "../data/test10.json";
 import test11 from "../data/test11.json";
 import test12 from "../data/test12.json";
 
-import Timer from "../components/Timer";
-import ProgressBar from "../components/ProgressBar";
-import QuestionCard from "../components/QuestionCard";
 
+// ==========================================
+// ALL TEST CONFIGURATION
+// ==========================================
+
+const testData = {
+
+    test1: {
+        title: "Java Basics 1",
+        questions: test1
+    },
+
+    test2: {
+        title: "Java Fundamentals 1",
+        questions: test2
+    },
+
+    test3: {
+        title: "AI & Data Science",
+        questions: test3
+    },
+
+    test4: {
+        title: "Python & Data Science",
+        questions: test4
+    },
+
+    test5: {
+        title: "Statistics & Machine Learning",
+        questions: test5
+    },
+
+    test6: {
+        title: "Machine Learning & AI",
+        questions: test6
+    },
+
+    test7: {
+        title: "Full Stack Web Development",
+        questions: test7
+    },
+
+    test8: {
+        title: "React & JavaScript",
+        questions: test8
+    },
+
+    test9: {
+        title: "Web APIs & Databases",
+        questions: test9
+    },
+
+    test10: {
+        title: "Generative AI & LLMs",
+        questions: test10
+    },
+
+    test11: {
+        title: "RAG, Embeddings & AI Systems",
+        questions: test11
+    },
+
+    test12: {
+        title: "Coding, Debugging & Aptitude",
+        questions: test12
+    }
+
+};
+
+
+// ==========================================
+// TEST NAMES
+// ==========================================
+
+const testNames = {
+
+    test1: "Java Basics 1",
+    test2: "Java Fundamentals 1",
+    test3: "AI & Data Science",
+    test4: "Python & Data Science",
+    test5: "Statistics & Machine Learning",
+    test6: "Machine Learning & AI",
+    test7: "Full Stack Web Development",
+    test8: "React & JavaScript",
+    test9: "Web APIs & Databases",
+    test10: "Generative AI & LLMs",
+    test11: "RAG, Embeddings & AI Systems",
+    test12: "Coding, Debugging & Aptitude"
+
+};
+
+
+// ==========================================
+// COMPONENT
+// ==========================================
 
 function Quiz() {
 
     const navigate = useNavigate();
-
-    /* ==============================
-          SELECTED TEST
-    ============================== */
-
-    const selectedTest = localStorage.getItem("selectedTest");
-
-    /* ==============================
-          TEST DATA
-    ============================== */
-
-    const testData = {
-
-        test1: test1,
-        test2: test2,
-        test3: test3,
-        test4: test4,
-        test5: test5,
-        test6: test6,
-        test7: test7,
-        test8: test8,
-        test9: test9,
-        test10: test10,
-        test11: test11,
-        test12: test12
-
-    };
-
-    const questions = testData[selectedTest] || test1;
-
-    const totalQuestions = questions.length;
-
-
-    /* ==============================
-          TEST TITLES
-    ============================== */
-
-    const testTitles = {
-
-        test1: "Java Basics 1",
-
-        test2: "Java Fundamentals 1",
-
-        test3: "AI & Data Science",
-
-        test4: "Python & Data Science",
-
-        test5: "Statistics & Machine Learning",
-
-        test6: "Machine Learning & AI",
-
-        test7: "Full Stack Web Development",
-
-        test8: "React & JavaScript",
-
-        test9: "Web APIs & Databases",
-
-        test10: "Generative AI & LLMs",
-
-        test11: "RAG, Embeddings & AI Systems",
-
-        test12: "Coding, Debugging & Aptitude"
-
-    };
-
-
-    const testTitle =
-        testTitles[selectedTest] || "Mock Test";
-
-
-    /* ==============================
-          STUDENT
-    ============================== */
-
-    const [student, setStudent] = useState(null);
-
-
-    /* ==============================
-          STATES
-    ============================== */
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
@@ -113,17 +128,46 @@ function Quiz() {
 
     const [submitted, setSubmitted] = useState(false);
 
-    const [showSubmitModal, setShowSubmitModal] = useState(false);
+    const [showSubmitModal, setShowSubmitModal] =
+        useState(false);
+
+    const [student, setStudent] = useState(null);
+
+    const [timeUp, setTimeUp] = useState(false);
 
 
-    /* ==============================
-          INITIAL CHECK
-    ============================== */
+    // ==========================================
+    // SELECTED TEST
+    // ==========================================
+
+    const selectedTest =
+        localStorage.getItem("selectedTest") || "test1";
+
+
+    // ==========================================
+    // SELECT TEST DATA
+    // ==========================================
+
+    const selectedTestData =
+        testData[selectedTest] || testData.test1;
+
+
+    const questions =
+        selectedTestData.questions;
+
+
+    const totalQuestions =
+        questions.length;
+
+
+    // ==========================================
+    // LOAD STUDENT
+    // ==========================================
 
     useEffect(() => {
 
         const storedStudent =
-            JSON.parse(localStorage.getItem("student"));
+            localStorage.getItem("student");
 
         if (!storedStudent) {
 
@@ -133,39 +177,48 @@ function Quiz() {
 
         }
 
-        if (!selectedTest || !testData[selectedTest]) {
+        try {
 
-            navigate("/tests");
+            setStudent(
+                JSON.parse(storedStudent)
+            );
 
-            return;
+        } catch (error) {
+
+            console.log(
+                "Student data error:",
+                error
+            );
+
+            localStorage.removeItem("student");
+
+            navigate("/");
 
         }
 
-        setStudent(storedStudent);
-
-    }, [navigate, selectedTest]);
+    }, [navigate]);
 
 
-    /* ==============================
-          ANSWER
-    ============================== */
+    // ==========================================
+    // ANSWER QUESTION
+    // ==========================================
 
-    const handleAnswer = (option) => {
+    const handleAnswer = useCallback((option) => {
 
-        setAnswers((prev) => ({
+        setAnswers((previousAnswers) => ({
 
-            ...prev,
+            ...previousAnswers,
 
             [currentQuestion]: option
 
         }));
 
-    };
+    }, [currentQuestion]);
 
 
-    /* ==============================
-          NEXT
-    ============================== */
+    // ==========================================
+    // NEXT QUESTION
+    // ==========================================
 
     const nextQuestion = () => {
 
@@ -183,9 +236,9 @@ function Quiz() {
     };
 
 
-    /* ==============================
-          PREVIOUS
-    ============================== */
+    // ==========================================
+    // PREVIOUS QUESTION
+    // ==========================================
 
     const previousQuestion = () => {
 
@@ -200,9 +253,9 @@ function Quiz() {
     };
 
 
-    /* ==============================
-          QUESTION PALETTE
-    ============================== */
+    // ==========================================
+    // JUMP TO QUESTION
+    // ==========================================
 
     const jumpToQuestion = (index) => {
 
@@ -211,13 +264,14 @@ function Quiz() {
     };
 
 
-    /* ==============================
-          CALCULATE SCORE
-    ============================== */
+    // ==========================================
+    // CALCULATE SCORE
+    // ==========================================
 
-    const calculateScore = () => {
+    const calculateScore = useCallback(() => {
 
         let score = 0;
+
 
         questions.forEach(
             (question, index) => {
@@ -234,42 +288,47 @@ function Quiz() {
             }
         );
 
+
         return score;
 
-    };
+    }, [questions, answers]);
 
 
-    /* ==============================
-          SUBMIT TEST
-    ============================== */
+    // ==========================================
+    // CREATE RESULT
+    // ==========================================
 
-    const submitTest = async () => {
-
-        if (submitted) return;
-
-        setShowSubmitModal(false);
+    const createResult = useCallback(() => {
 
         const score =
             calculateScore();
 
 
-        const result = {
+        const percentage =
+            totalQuestions > 0
+                ? (
+                    (score /
+                        totalQuestions) *
+                    100
+                ).toFixed(2)
+                : "0.00";
+
+
+        return {
 
             student,
 
             testName: selectedTest,
 
-            testTitle: testTitle,
+            testTitle:
+                testNames[selectedTest] ||
+                "Mock Test",
 
             score,
 
             total: totalQuestions,
 
-            percentage:
-                (
-                    (score / totalQuestions) *
-                    100
-                ).toFixed(2),
+            percentage,
 
             answers,
 
@@ -278,16 +337,39 @@ function Quiz() {
 
         };
 
+    }, [
+        calculateScore,
+        totalQuestions,
+        student,
+        selectedTest,
+        answers
+    ]);
 
-        /* Save result locally */
+
+    // ==========================================
+    // SUBMIT RESULT
+    // ==========================================
+
+    const submitTest = useCallback(async () => {
+
+        if (submitted) {
+
+            return;
+
+        }
+
+
+        const result =
+            createResult();
+
+
+        // Save locally first
 
         localStorage.setItem(
             "result",
             JSON.stringify(result)
         );
 
-
-        /* Save result to backend */
 
         try {
 
@@ -298,22 +380,24 @@ function Quiz() {
                 result
 
             );
+
 
             console.log(
                 "Result Saved Successfully"
             );
 
-        } catch (err) {
+
+        } catch (error) {
 
             console.log(
-                "Unable to save result:",
-                err
+                "Result submission error:",
+                error
             );
 
         }
 
 
-        /* Remove exam timer */
+        // Remove timer
 
         localStorage.removeItem(
             "examStartTime"
@@ -323,60 +407,40 @@ function Quiz() {
         setSubmitted(true);
 
 
-        /* Go to result */
-
         navigate("/result");
 
-    };
+    }, [
+        submitted,
+        createResult,
+        navigate
+    ]);
 
 
-    /* ==============================
-          AUTO SUBMIT
-    ============================== */
+    // ==========================================
+    // AUTO SUBMIT
+    // ==========================================
 
-    const autoSubmit = async () => {
+    const autoSubmit = useCallback(async () => {
 
-        if (submitted) return;
+        if (submitted) {
 
-        const score =
-            calculateScore();
+            return;
 
-
-        const result = {
-
-            student,
-
-            testName: selectedTest,
-
-            testTitle: testTitle,
-
-            score,
-
-            total: totalQuestions,
-
-            percentage:
-                (
-                    (score / totalQuestions) *
-                    100
-                ).toFixed(2),
-
-            answers,
-
-            submittedAt:
-                new Date().toLocaleString()
-
-        };
+        }
 
 
-        /* Save locally */
+        setTimeUp(true);
+
+
+        const result =
+            createResult();
+
 
         localStorage.setItem(
             "result",
             JSON.stringify(result)
         );
 
-
-        /* Save backend */
 
         try {
 
@@ -388,11 +452,17 @@ function Quiz() {
 
             );
 
-        } catch (err) {
 
             console.log(
-                "Auto submit error:",
-                err
+                "Auto Result Saved"
+            );
+
+
+        } catch (error) {
+
+            console.log(
+                "Auto submission error:",
+                error
             );
 
         }
@@ -405,37 +475,91 @@ function Quiz() {
 
         setSubmitted(true);
 
+
         setShowSubmitModal(false);
 
 
         navigate("/result");
 
-    };
+    }, [
+        submitted,
+        createResult,
+        navigate
+    ]);
 
 
-    /* ==============================
-          WAIT FOR STUDENT
-    ============================== */
+    // ==========================================
+    // TIMER EVENT
+    // ==========================================
+
+    useEffect(() => {
+
+        if (timeUp) {
+
+            return;
+
+        }
+
+        const handleTimeUp = () => {
+
+            autoSubmit();
+
+        };
+
+
+        window.addEventListener(
+            "examTimeUp",
+            handleTimeUp
+        );
+
+
+        return () => {
+
+            window.removeEventListener(
+                "examTimeUp",
+                handleTimeUp
+            );
+
+        };
+
+    }, [autoSubmit, timeUp]);
+
+
+    // ==========================================
+    // SAFETY CHECK
+    // ==========================================
 
     if (!student) {
 
-        return null;
+        return (
+
+            <div className="quiz-page">
+
+                <div className="question-section">
+
+                    Loading assessment...
+
+                </div>
+
+            </div>
+
+        );
 
     }
 
 
-    /* ==============================
-          UI
-    ============================== */
+    // ==========================================
+    // RENDER
+    // ==========================================
 
     return (
 
         <div className="quiz-page">
 
 
-            {/* =========================
+            {/* ==================================
                     HEADER
-            ========================= */}
+            ================================== */}
 
             <div className="quiz-header">
 
@@ -443,9 +567,10 @@ function Quiz() {
 
                     <h2>
 
-                        {testTitle}
+                        {selectedTestData.title}
 
                     </h2>
+
 
                     <p>
 
@@ -461,46 +586,46 @@ function Quiz() {
                 </div>
 
 
-                <Timer
+                {/* ==================================
+                        TIMER
+                ================================== */}
+
+                <TimerWrapper
                     onTimeUp={autoSubmit}
                 />
 
             </div>
 
 
-            {/* =========================
-                  PROGRESS BAR
-            ========================= */}
+            {/* ==================================
+                    PROGRESS BAR
+            ================================== */}
 
-            <ProgressBar
-
+            <ProgressBarWrapper
                 current={
                     currentQuestion + 1
                 }
-
-                total={
-                    totalQuestions
-                }
-
+                total={totalQuestions}
             />
 
 
-            {/* =========================
-                  MAIN CONTAINER
-            ========================= */}
+            {/* ==================================
+                    MAIN CONTAINER
+            ================================== */}
 
             <div className="quiz-container">
 
 
-                {/* =========================
-                     LEFT PANEL
-                ========================= */}
+                {/* ==================================
+                        LEFT PANEL
+                ================================== */}
 
                 <div className="student-panel">
 
                     <h3>
                         Candidate Details
                     </h3>
+
 
                     <hr />
 
@@ -560,9 +685,9 @@ function Quiz() {
                     </span>
 
 
-                    {/* =========================
-                         PROGRESS
-                    ========================= */}
+                    {/* ==================================
+                            STATUS
+                    ================================== */}
 
                     <div className="status-box">
 
@@ -575,11 +700,9 @@ function Quiz() {
 
                             Answered :
 
-                            {
-                                Object.keys(
-                                    answers
-                                ).length
-                            }
+                            {" "}
+
+                            {Object.keys(answers).length}
 
                             {" / "}
 
@@ -592,11 +715,11 @@ function Quiz() {
 
                             Remaining :
 
+                            {" "}
+
                             {
                                 totalQuestions -
-                                Object.keys(
-                                    answers
-                                ).length
+                                Object.keys(answers).length
                             }
 
                         </p>
@@ -606,12 +729,11 @@ function Quiz() {
                 </div>
 
 
-                {/* =========================
-                    CENTER QUESTION
-                ========================= */}
+                {/* ==================================
+                        CENTER QUESTION
+                ================================== */}
 
                 <div className="question-section">
-
 
                     <h3>
 
@@ -626,7 +748,7 @@ function Quiz() {
                     </h3>
 
 
-                    <QuestionCard
+                    <QuestionCardWrapper
 
                         question={
                             questions[
@@ -647,9 +769,9 @@ function Quiz() {
                     />
 
 
-                    {/* =========================
-                         NAVIGATION
-                    ========================= */}
+                    {/* ==================================
+                            NAVIGATION
+                    ================================== */}
 
                     <div className="navigation-buttons">
 
@@ -692,18 +814,16 @@ function Quiz() {
 
                         </button>
 
-
                     </div>
 
                 </div>
 
 
-                {/* =========================
-                    RIGHT PALETTE
-                ========================= */}
+                {/* ==================================
+                        RIGHT PANEL
+                ================================== */}
 
                 <div className="question-palette">
-
 
                     <h3>
                         Question Palette
@@ -714,7 +834,7 @@ function Quiz() {
 
 
                         {questions.map(
-                            (q, index) => (
+                            (question, index) => (
 
                                 <button
 
@@ -722,16 +842,13 @@ function Quiz() {
 
                                     className={`
                                         palette-btn
+
                                         ${
                                             currentQuestion ===
                                             index
-
                                                 ? "current"
-
                                                 : answers[index]
-
                                                 ? "answered"
-
                                                 : "unanswered"
                                         }
                                     `}
@@ -754,9 +871,9 @@ function Quiz() {
                     </div>
 
 
-                    {/* =========================
-                         LEGEND
-                    ========================= */}
+                    {/* ==================================
+                            LEGEND
+                    ================================== */}
 
                     <div className="palette-legend">
 
@@ -765,7 +882,7 @@ function Quiz() {
 
                             <span
                                 className="legend current-box"
-                            ></span>
+                            />
 
                             Current
 
@@ -776,7 +893,7 @@ function Quiz() {
 
                             <span
                                 className="legend answered-box"
-                            ></span>
+                            />
 
                             Answered
 
@@ -787,19 +904,18 @@ function Quiz() {
 
                             <span
                                 className="legend unanswered-box"
-                            ></span>
+                            />
 
                             Unanswered
 
                         </div>
 
-
                     </div>
 
 
-                    {/* =========================
-                         SUBMIT BUTTON
-                    ========================= */}
+                    {/* ==================================
+                            SUBMIT
+                    ================================== */}
 
                     <button
 
@@ -825,50 +941,33 @@ function Quiz() {
                     </button>
 
 
-                    {/* =========================
-                         SUBMIT MODAL
-                    ========================= */}
+                    {/* ==================================
+                            SUBMIT MODAL
+                    ================================== */}
 
                     {showSubmitModal && (
 
-                        <div
+                        <div className="modal-overlay">
 
-                            className="modal-overlay"
 
-                            onClick={() =>
-                                setShowSubmitModal(
-                                    false
-                                )
-                            }
-
-                        >
-
-                            <div
-
-                                className="submit-modal"
-
-                                onClick={(e) =>
-                                    e.stopPropagation()
-                                }
-
-                            >
+                            <div className="submit-modal">
 
                                 <h2>
-                                    📝 Submit Assessment
+                                    Submit Assessment?
                                 </h2>
 
 
                                 <p>
 
-                                    You have answered
-                                    all questions
-                                    successfully.
+                                    Are you sure you
+                                    want to submit your
+                                    assessment?
 
                                     <br />
 
-                                    After submission,
-                                    your responses
-                                    cannot be changed.
+                                    Once submitted,
+                                    you cannot modify
+                                    your answers.
 
                                 </p>
 
@@ -897,16 +996,21 @@ function Quiz() {
 
                                         className="confirm-btn"
 
-                                        onClick={
-                                            submitTest
-                                        }
+                                        onClick={() => {
+
+                                            setShowSubmitModal(
+                                                false
+                                            );
+
+                                            submitTest();
+
+                                        }}
 
                                     >
 
                                         Submit
 
                                     </button>
-
 
                                 </div>
 
@@ -921,9 +1025,9 @@ function Quiz() {
             </div>
 
 
-            {/* =========================
+            {/* ==================================
                     FOOTER
-            ========================= */}
+            ================================== */}
 
             <footer className="footer">
 
@@ -932,8 +1036,81 @@ function Quiz() {
 
             </footer>
 
-
         </div>
+
+    );
+
+}
+
+
+// ==========================================
+// TIMER WRAPPER
+// ==========================================
+
+function TimerWrapper({ onTimeUp }) {
+
+    const Timer =
+        require("../components/Timer").default;
+
+    return (
+
+        <Timer
+            onTimeUp={onTimeUp}
+        />
+
+    );
+
+}
+
+
+// ==========================================
+// PROGRESS BAR WRAPPER
+// ==========================================
+
+function ProgressBarWrapper({
+    current,
+    total
+}) {
+
+    const ProgressBar =
+        require("../components/ProgressBar").default;
+
+    return (
+
+        <ProgressBar
+            current={current}
+            total={total}
+        />
+
+    );
+
+}
+
+
+// ==========================================
+// QUESTION CARD WRAPPER
+// ==========================================
+
+function QuestionCardWrapper({
+    question,
+    selected,
+    onSelect
+}) {
+
+    const QuestionCard =
+        require("../components/QuestionCard").default;
+
+    return (
+
+        <QuestionCard
+
+            question={question}
+
+            selected={selected}
+
+            onSelect={onSelect}
+
+        />
 
     );
 

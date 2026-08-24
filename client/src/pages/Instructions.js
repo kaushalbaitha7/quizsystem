@@ -10,6 +10,99 @@ import {
 } from "react-icons/fa";
 
 
+// =====================================
+// ALL TEST CONFIGURATION
+// =====================================
+
+const testDetails = {
+
+    test1: {
+        title: "Java Basics 1",
+        questions: 20,
+        duration: "15 Minutes",
+        marks: 20
+    },
+
+    test2: {
+        title: "Java Fundamentals 1",
+        questions: 20,
+        duration: "15 Minutes",
+        marks: 20
+    },
+
+    test3: {
+        title: "AI & Data Science",
+        questions: 20,
+        duration: "15 Minutes",
+        marks: 20
+    },
+
+    test4: {
+        title: "Python & Data Science",
+        questions: 20,
+        duration: "15 Minutes",
+        marks: 20
+    },
+
+    test5: {
+        title: "Statistics & Machine Learning",
+        questions: 20,
+        duration: "15 Minutes",
+        marks: 20
+    },
+
+    test6: {
+        title: "Machine Learning & AI",
+        questions: 20,
+        duration: "15 Minutes",
+        marks: 20
+    },
+
+    test7: {
+        title: "Full Stack Web Development",
+        questions: 20,
+        duration: "15 Minutes",
+        marks: 20
+    },
+
+    test8: {
+        title: "React & JavaScript",
+        questions: 20,
+        duration: "15 Minutes",
+        marks: 20
+    },
+
+    test9: {
+        title: "Web APIs & Databases",
+        questions: 20,
+        duration: "15 Minutes",
+        marks: 20
+    },
+
+    test10: {
+        title: "Generative AI & LLMs",
+        questions: 20,
+        duration: "15 Minutes",
+        marks: 20
+    },
+
+    test11: {
+        title: "RAG, Embeddings & AI Systems",
+        questions: 20,
+        duration: "15 Minutes",
+        marks: 20
+    },
+
+    test12: {
+        title: "Coding, Debugging & Aptitude",
+        questions: 20,
+        duration: "15 Minutes",
+        marks: 20
+    }
+
+};
+
+
 function Instructions() {
 
     const navigate = useNavigate();
@@ -20,111 +113,14 @@ function Instructions() {
     const selectedTest =
         localStorage.getItem("selectedTest");
 
-
-    /* ==============================
-          TEST DETAILS
-    ============================== */
-
-    const testDetails = {
-
-        test1: {
-            title: "Java Basics 1",
-            questions: 20,
-            duration: "15 Min",
-            marks: 20
-        },
-
-        test2: {
-            title: "Java Fundamentals 1",
-            questions: 20,
-            duration: "15 Min",
-            marks: 20
-        },
-
-        test3: {
-            title: "AI & Data Science",
-            questions: 20,
-            duration: "15 Min",
-            marks: 20
-        },
-
-        test4: {
-            title: "Python & Data Science",
-            questions: 20,
-            duration: "15 Min",
-            marks: 20
-        },
-
-        test5: {
-            title: "Statistics & Machine Learning",
-            questions: 20,
-            duration: "15 Min",
-            marks: 20
-        },
-
-        test6: {
-            title: "Machine Learning & AI",
-            questions: 20,
-            duration: "15 Min",
-            marks: 20
-        },
-
-        test7: {
-            title: "Full Stack Web Development",
-            questions: 20,
-            duration: "15 Min",
-            marks: 20
-        },
-
-        test8: {
-            title: "React & JavaScript",
-            questions: 20,
-            duration: "15 Min",
-            marks: 20
-        },
-
-        test9: {
-            title: "Web APIs & Databases",
-            questions: 20,
-            duration: "15 Min",
-            marks: 20
-        },
-
-        test10: {
-            title: "Generative AI & LLMs",
-            questions: 20,
-            duration: "15 Min",
-            marks: 20
-        },
-
-        test11: {
-            title: "RAG, Embeddings & AI Systems",
-            questions: 20,
-            duration: "15 Min",
-            marks: 20
-        },
-
-        test12: {
-            title: "Coding, Debugging & Aptitude",
-            questions: 20,
-            duration: "15 Min",
-            marks: 20
-        }
-
-    };
-
-
-    /* ==============================
-          CHECK SELECTED TEST
-    ============================== */
-
     const currentTest =
-        testDetails[selectedTest];
+        testDetails[selectedTest] ||
+        testDetails.test1;
 
 
-    /* ==============================
-          LOAD STUDENT
-    ============================== */
+    // =====================================
+    // LOAD STUDENT
+    // =====================================
 
     useEffect(() => {
 
@@ -132,7 +128,6 @@ function Instructions() {
             JSON.parse(
                 localStorage.getItem("student")
             );
-
 
         if (!data) {
 
@@ -142,27 +137,14 @@ function Instructions() {
 
         }
 
-
-        if (
-            !selectedTest ||
-            !testDetails[selectedTest]
-        ) {
-
-            navigate("/tests");
-
-            return;
-
-        }
-
-
         setStudent(data);
 
-    }, [navigate, selectedTest]);
+    }, [navigate]);
 
 
-    /* ==============================
-          START EXAM
-    ============================== */
+    // =====================================
+    // START EXAM
+    // =====================================
 
     const startExam = () => {
 
@@ -177,10 +159,12 @@ function Instructions() {
         }
 
 
-        /*
-         * Always start a fresh timer
-         * when a new test is opened.
-         */
+        // Clear previous exam data
+
+        localStorage.removeItem("result");
+
+
+        // Start fresh timer
 
         localStorage.setItem(
             "examStartTime",
@@ -193,43 +177,18 @@ function Instructions() {
     };
 
 
-    /* ==============================
-          SAFETY CHECK
-    ============================== */
-
-    if (!currentTest) {
-
-        return null;
-
-    }
-
-
     return (
 
         <div className="instruction-page">
 
-
-            {/* =========================
-                    MAIN CARD
-            ========================= */}
-
             <div className="instruction-card">
 
-
-                {/* LOGO */}
-
                 <img
-
                     src="/logo.png"
-
                     className="logo"
-
                     alt="EETIRP Logo"
-
                 />
 
-
-                {/* TITLE */}
 
                 <h1>
                     {currentTest.title}
@@ -244,12 +203,11 @@ function Instructions() {
                 </p>
 
 
-                {/* =========================
+                {/* ================================
                     CANDIDATE DETAILS
-                ========================= */}
+                ================================= */}
 
                 <div className="candidate-card">
-
 
                     <h3>
 
@@ -262,9 +220,7 @@ function Instructions() {
 
                     <div className="detail-row">
 
-                        <span>
-                            Name
-                        </span>
+                        <span>Name</span>
 
                         <span>
                             {student.name}
@@ -275,9 +231,7 @@ function Instructions() {
 
                     <div className="detail-row">
 
-                        <span>
-                            USN / URN
-                        </span>
+                        <span>USN / URN</span>
 
                         <span>
                             {student.usn}
@@ -288,9 +242,7 @@ function Instructions() {
 
                     <div className="detail-row">
 
-                        <span>
-                            College
-                        </span>
+                        <span>College</span>
 
                         <span>
                             {student.college}
@@ -301,9 +253,7 @@ function Instructions() {
 
                     <div className="detail-row">
 
-                        <span>
-                            Branch
-                        </span>
+                        <span>Branch</span>
 
                         <span>
                             {student.branch}
@@ -314,9 +264,7 @@ function Instructions() {
 
                     <div className="detail-row">
 
-                        <span>
-                            Semester
-                        </span>
+                        <span>Semester</span>
 
                         <span>
                             {student.semester}
@@ -324,18 +272,14 @@ function Instructions() {
 
                     </div>
 
-
                 </div>
 
 
-                {/* =========================
-                       EXAM INFORMATION
-                ========================= */}
+                {/* ================================
+                    EXAM INFORMATION
+                ================================= */}
 
                 <div className="exam-info">
-
-
-                    {/* QUESTIONS */}
 
                     <div className="info-box">
 
@@ -352,8 +296,6 @@ function Instructions() {
                     </div>
 
 
-                    {/* DURATION */}
-
                     <div className="info-box">
 
                         <FaClock />
@@ -369,8 +311,6 @@ function Instructions() {
                     </div>
 
 
-                    {/* MARKS */}
-
                     <div className="info-box">
 
                         <FaCheckCircle />
@@ -385,92 +325,71 @@ function Instructions() {
 
                     </div>
 
-
                 </div>
 
 
-                {/* =========================
-                         RULES
-                ========================= */}
+                {/* ================================
+                    INSTRUCTIONS
+                ================================= */}
 
                 <div className="rules">
-
 
                     <h3>
                         Instructions
                     </h3>
 
-
                     <ul>
 
                         <li>
-                            Read every question
-                            carefully before answering.
+                            Read every question carefully
+                            before answering.
                         </li>
 
                         <li>
-                            Each question carries
-                            1 mark.
+                            Each question carries 1 mark.
                         </li>
 
                         <li>
-                            No negative marking.
+                            There is no negative marking.
                         </li>
 
                         <li>
-                            You can move using
-                            Previous and Next buttons.
+                            You can move using Previous
+                            and Next buttons.
                         </li>
 
                         <li>
-                            You can jump to any
-                            question using the
-                            question palette.
+                            You can jump to any question
+                            using the question palette.
                         </li>
 
                         <li>
-                            Test will auto-submit
-                            after {currentTest.duration}.
+                            Test will auto-submit after
+                            {` ${currentTest.duration}`}.
                         </li>
 
                         <li>
-                            Make sure all questions
-                            are answered before
-                            submitting.
-                        </li>
-
-                        <li>
-                            Once submitted, your
-                            answers cannot be changed.
+                            Click Submit once you finish.
                         </li>
 
                     </ul>
 
-
                 </div>
 
 
-                {/* =========================
-                      AGREEMENT CHECKBOX
-                ========================= */}
+                {/* ================================
+                    AGREEMENT
+                ================================= */}
 
                 <div className="checkbox">
 
-
                     <input
-
                         type="checkbox"
-
                         checked={agree}
-
                         onChange={(e) =>
-                            setAgree(
-                                e.target.checked
-                            )
+                            setAgree(e.target.checked)
                         }
-
                     />
-
 
                     <label>
 
@@ -479,39 +398,29 @@ function Instructions() {
 
                     </label>
 
-
                 </div>
 
 
-                {/* =========================
-                         START BUTTON
-                ========================= */}
+                {/* ================================
+                    START BUTTON
+                ================================= */}
 
                 <button
-
                     onClick={startExam}
-
                     disabled={!agree}
-
                     className={
                         !agree
                             ? "disabled-btn"
                             : ""
                     }
-
                 >
 
                     Start Test
 
                 </button>
 
-
             </div>
 
-
-            {/* =========================
-                      FOOTER
-            ========================= */}
 
             <footer className="footer">
 
@@ -520,12 +429,10 @@ function Instructions() {
 
             </footer>
 
-
         </div>
 
     );
 
 }
-
 
 export default Instructions;
