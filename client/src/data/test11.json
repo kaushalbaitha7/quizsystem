@@ -1,0 +1,242 @@
+[
+  {
+    "question": "20% of x is 50. x=",
+    "options": [
+      "100",
+      "200",
+      "250",
+      "500"
+    ],
+    "answer": "C",
+    "topic": "Aptitude",
+    "explanation": "0.2x=50, so x=250."
+  },
+  {
+    "question": "Ratio 2:3, total 25. First part=",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "15"
+    ],
+    "answer": "B",
+    "topic": "Aptitude",
+    "explanation": "2/5 of 25 is 10."
+  },
+  {
+    "question": "Average of 10,20,30=",
+    "options": [
+      "15",
+      "20",
+      "25",
+      "30"
+    ],
+    "answer": "B",
+    "topic": "Aptitude",
+    "explanation": "Sum 60 divided by 3 is 20."
+  },
+  {
+    "question": "60 km in 1.5 hours gives speed:",
+    "options": [
+      "30",
+      "40",
+      "45",
+      "90"
+    ],
+    "answer": "B",
+    "topic": "Aptitude",
+    "explanation": "60/1.5=40 km/h."
+  },
+  {
+    "question": "100 to 120 is increase of:",
+    "options": [
+      "10%",
+      "15%",
+      "20%",
+      "25%"
+    ],
+    "answer": "C",
+    "topic": "Aptitude",
+    "explanation": "Increase 20 on base 100 is 20%."
+  },
+  {
+    "question": "Which is prime?",
+    "options": [
+      "21",
+      "29",
+      "39",
+      "51"
+    ],
+    "answer": "B",
+    "topic": "Aptitude",
+    "explanation": "29 is prime."
+  },
+  {
+    "question": "Next: 2,4,8,16,?",
+    "options": [
+      "18",
+      "24",
+      "30",
+      "32"
+    ],
+    "answer": "D",
+    "topic": "Reasoning",
+    "explanation": "Multiply by 2."
+  },
+  {
+    "question": "Next: 3,6,11,18,?",
+    "options": [
+      "25",
+      "27",
+      "29",
+      "31"
+    ],
+    "answer": "B",
+    "topic": "Reasoning",
+    "explanation": "Differences are 3,5,7,9."
+  },
+  {
+    "question": "CAT→DBU, DOG→?",
+    "options": [
+      "EPH",
+      "EOG",
+      "DPH",
+      "FPI"
+    ],
+    "answer": "A",
+    "topic": "Reasoning",
+    "explanation": "Shift each letter +1."
+  },
+  {
+    "question": "All roses are flowers; therefore:",
+    "options": [
+      "All roses are flowers",
+      "All flowers are roses",
+      "All roses fade",
+      "No roses fade"
+    ],
+    "answer": "A",
+    "topic": "Logic",
+    "explanation": "It follows directly from the premise."
+  },
+  {
+    "question": "A=1,B=2,C=3. CAB=",
+    "options": [
+      "312",
+      "321",
+      "123",
+      "213"
+    ],
+    "answer": "A",
+    "topic": "Reasoning",
+    "explanation": "C=3,A=1,B=2."
+  },
+  {
+    "question": "5 workers need 10 days; 10 workers need:",
+    "options": [
+      "2",
+      "5",
+      "10",
+      "20"
+    ],
+    "answer": "B",
+    "topic": "Aptitude",
+    "explanation": "Work = workers×days, so 50=10d."
+  },
+  {
+    "question": "SI on 1000 at 10% for 2 years:",
+    "options": [
+      "100",
+      "150",
+      "200",
+      "210"
+    ],
+    "answer": "C",
+    "topic": "Aptitude",
+    "explanation": "SI=1000×10×2/100=200."
+  },
+  {
+    "question": "Clock gains 5 min/hour. In 6 hours gains:",
+    "options": [
+      "5",
+      "10",
+      "20",
+      "30"
+    ],
+    "answer": "D",
+    "topic": "Aptitude",
+    "explanation": "5×6=30 minutes."
+  },
+  {
+    "question": "10 days after Monday is:",
+    "options": [
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Sunday"
+    ],
+    "answer": "B",
+    "topic": "Reasoning",
+    "explanation": "10 mod 7=3; Monday+3=Thursday."
+  },
+  {
+    "question": "Largest:",
+    "options": [
+      "0.7",
+      "0.07",
+      "0.77",
+      "0.707"
+    ],
+    "answer": "C",
+    "topic": "Aptitude",
+    "explanation": "0.77 is largest."
+  },
+  {
+    "question": "3 red and 2 blue. Probability red:",
+    "options": [
+      "2/5",
+      "3/5",
+      "1/2",
+      "3/2"
+    ],
+    "answer": "B",
+    "topic": "Probability",
+    "explanation": "3 favorable out of 5."
+  },
+  {
+    "question": "x+7=20. x=",
+    "options": [
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "answer": "C",
+    "topic": "Arithmetic",
+    "explanation": "20−7=13."
+  },
+  {
+    "question": "4 machines make 40 parts/hour. 6 make:",
+    "options": [
+      "50",
+      "60",
+      "70",
+      "80"
+    ],
+    "answer": "B",
+    "topic": "Aptitude",
+    "explanation": "10 parts per machine per hour."
+  },
+  {
+    "question": "Odd one out:",
+    "options": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MongoDB"
+    ],
+    "answer": "D",
+    "topic": "Technical reasoning",
+    "explanation": "MongoDB is a database; the others are core web technologies/language."
+  }
+]

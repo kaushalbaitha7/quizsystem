@@ -1,0 +1,242 @@
+[
+  {
+    "question": "If x=5 and x>3, output is:",
+    "options": [
+      "A",
+      "B",
+      "5",
+      "Error"
+    ],
+    "answer": "A",
+    "topic": "Logic",
+    "explanation": "5 is greater than 3."
+  },
+  {
+    "question": "First Python list index:",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "Depends"
+    ],
+    "answer": "A",
+    "topic": "Python",
+    "explanation": "Indexing starts at zero."
+  },
+  {
+    "question": "Known iteration count commonly uses:",
+    "options": [
+      "for",
+      "while only",
+      "switch",
+      "if"
+    ],
+    "answer": "A",
+    "topic": "Programming",
+    "explanation": "for is convenient for sequences."
+  },
+  {
+    "question": "Skip current loop iteration:",
+    "options": [
+      "continue",
+      "break",
+      "skipLoop",
+      "nextOnly"
+    ],
+    "answer": "A",
+    "topic": "Programming",
+    "explanation": "continue moves to the next iteration."
+  },
+  {
+    "question": "Exit loop:",
+    "options": [
+      "break",
+      "continue",
+      "exitLoop",
+      "end"
+    ],
+    "answer": "A",
+    "topic": "Programming",
+    "explanation": "break exits the nearest loop."
+  },
+  {
+    "question": "3*4+2 equals:",
+    "options": [
+      "14",
+      "20",
+      "10",
+      "24"
+    ],
+    "answer": "A",
+    "topic": "Arithmetic",
+    "explanation": "Multiplication precedes addition."
+  },
+  {
+    "question": "(3+4)*2 equals:",
+    "options": [
+      "14",
+      "11",
+      "10",
+      "21"
+    ],
+    "answer": "A",
+    "topic": "Arithmetic",
+    "explanation": "Parentheses first."
+  },
+  {
+    "question": "10>20 is:",
+    "options": [
+      "True",
+      "False",
+      "10",
+      "20"
+    ],
+    "answer": "B",
+    "topic": "Logic",
+    "explanation": "10 is not greater than 20."
+  },
+  {
+    "question": "Logical AND in many C-like languages:",
+    "options": [
+      "&&",
+      "||",
+      "!",
+      "%"
+    ],
+    "answer": "A",
+    "topic": "Programming",
+    "explanation": "&& is AND."
+  },
+  {
+    "question": "Logical OR in many C-like languages:",
+    "options": [
+      "||",
+      "&&",
+      "!",
+      "//"
+    ],
+    "answer": "A",
+    "topic": "Programming",
+    "explanation": "|| is OR."
+  },
+  {
+    "question": "Binary search requires:",
+    "options": [
+      "Sorted data",
+      "Random data",
+      "Encrypted data",
+      "Duplicates"
+    ],
+    "answer": "A",
+    "topic": "Algorithms",
+    "explanation": "Ordering is required."
+  },
+  {
+    "question": "Binary search time complexity:",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(n²)",
+      "O(1) always"
+    ],
+    "answer": "A",
+    "topic": "Algorithms",
+    "explanation": "Search range halves each step."
+  },
+  {
+    "question": "Linear search worst-case complexity:",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(1)",
+      "O(n log n)"
+    ],
+    "answer": "A",
+    "topic": "Algorithms",
+    "explanation": "May inspect every element."
+  },
+  {
+    "question": "LIFO structure:",
+    "options": [
+      "Stack",
+      "Queue",
+      "Tree",
+      "Graph"
+    ],
+    "answer": "A",
+    "topic": "Data Structures",
+    "explanation": "Stack is last-in-first-out."
+  },
+  {
+    "question": "FIFO structure:",
+    "options": [
+      "Queue",
+      "Stack",
+      "Heap only",
+      "Tree"
+    ],
+    "answer": "A",
+    "topic": "Data Structures",
+    "explanation": "Queue is first-in-first-out."
+  },
+  {
+    "question": "Python key-value structure:",
+    "options": [
+      "Dictionary",
+      "List",
+      "Tuple",
+      "String"
+    ],
+    "answer": "A",
+    "topic": "Python",
+    "explanation": "Dictionary maps keys to values."
+  },
+  {
+    "question": "Wrong program logic is usually a:",
+    "options": [
+      "Logical error",
+      "Syntax error only",
+      "Hardware error",
+      "Cable error"
+    ],
+    "answer": "A",
+    "topic": "Debugging",
+    "explanation": "Program runs but behavior is wrong."
+  },
+  {
+    "question": "Missing bracket preventing parsing is:",
+    "options": [
+      "Syntax error",
+      "Logical error",
+      "Data error",
+      "UI error"
+    ],
+    "answer": "A",
+    "topic": "Debugging",
+    "explanation": "Syntax errors prevent valid parsing."
+  },
+  {
+    "question": "Boundary tests help find:",
+    "options": [
+      "Edge-case bugs",
+      "Colors",
+      "DB names",
+      "Fonts only"
+    ],
+    "answer": "A",
+    "topic": "Testing",
+    "explanation": "Boundary values expose edge cases."
+  },
+  {
+    "question": "Good first debugging step:",
+    "options": [
+      "Reproduce and isolate",
+      "Rewrite everything",
+      "Delete project",
+      "Ignore error"
+    ],
+    "answer": "A",
+    "topic": "Debugging",
+    "explanation": "Systematic reproduction narrows the cause."
+  }
+]

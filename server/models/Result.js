@@ -2,38 +2,125 @@ const mongoose = require("mongoose");
 
 const ResultSchema = new mongoose.Schema({
 
+    // =====================================
+    // STUDENT DETAILS
+    // =====================================
+
     student: {
 
-        name: String,
+        name: {
+            type: String,
+            required: true
+        },
 
-        usn: String,
+        usn: {
+            type: String,
+            required: true
+        },
 
-        college: String,
+        college: {
+            type: String,
+            required: true
+        },
 
-        branch: String,
+        branch: {
+            type: String,
+            required: true
+        },
 
-        semester: String
+        semester: {
+            type: String,
+            required: true
+        }
 
     },
+
+
+    // =====================================
+    // TEST DETAILS
+    // =====================================
 
     testName: {
 
         type: String,
 
+        required: true,
+
         default: "test1"
 
     },
 
-    score: Number,
+    testTitle: {
 
-    total: Number,
+        type: String,
 
-    percentage: Number,
+        default: "Mock Test 1"
 
-    answers: Object,
+    },
 
-    submittedAt: String
+
+    // =====================================
+    // RESULT DETAILS
+    // =====================================
+
+    score: {
+
+        type: Number,
+
+        required: true
+
+    },
+
+    total: {
+
+        type: Number,
+
+        required: true
+
+    },
+
+    percentage: {
+
+        type: Number,
+
+        required: true
+
+    },
+
+
+    // =====================================
+    // ANSWERS
+    // =====================================
+
+    answers: {
+
+        type: Object,
+
+        default: {}
+
+    },
+
+
+    // =====================================
+    // SUBMISSION TIME
+    // =====================================
+
+    submittedAt: {
+
+        type: String,
+
+        required: true
+
+    }
+
+}, {
+
+    timestamps: true
 
 });
 
-module.exports = mongoose.model("Result", ResultSchema);
+
+module.exports = mongoose.model(
+    "Result",
+    ResultSchema
+);

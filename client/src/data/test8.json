@@ -1,0 +1,242 @@
+[
+  {
+    "question": "RAG retrieves:",
+    "options": [
+      "Relevant information",
+      "CSS",
+      "Passwords",
+      "CPU instructions"
+    ],
+    "answer": "A",
+    "topic": "RAG",
+    "explanation": "Retrieval supplies relevant evidence."
+  },
+  {
+    "question": "Retrieved chunks are usually:",
+    "options": [
+      "Provided as model context",
+      "Deleted",
+      "Converted to CSS",
+      "Ignored"
+    ],
+    "answer": "A",
+    "topic": "RAG",
+    "explanation": "They are passed to generation."
+  },
+  {
+    "question": "Embeddings help with:",
+    "options": [
+      "Semantic similarity",
+      "CSS",
+      "Authentication",
+      "HTTP"
+    ],
+    "answer": "A",
+    "topic": "Embeddings",
+    "explanation": "Vector representations enable semantic search."
+  },
+  {
+    "question": "Cosine similarity commonly compares:",
+    "options": [
+      "Vector direction",
+      "File size",
+      "CPU speed",
+      "Rows"
+    ],
+    "answer": "A",
+    "topic": "Vector search",
+    "explanation": "It measures angular similarity."
+  },
+  {
+    "question": "Vector database stores:",
+    "options": [
+      "Embeddings/vectors",
+      "CSS selectors",
+      "HTML tags",
+      "Keyboard input"
+    ],
+    "answer": "A",
+    "topic": "Vector DB",
+    "explanation": "Vector stores support similarity retrieval."
+  },
+  {
+    "question": "Chunking means:",
+    "options": [
+      "Splitting documents",
+      "Deleting documents",
+      "Compressing RAM",
+      "Creating APIs"
+    ],
+    "answer": "A",
+    "topic": "RAG",
+    "explanation": "Documents are split into retrievable units."
+  },
+  {
+    "question": "Chunk overlap can help:",
+    "options": [
+      "Preserve boundary context",
+      "Delete context",
+      "Increase CPU clock",
+      "Change HTML"
+    ],
+    "answer": "A",
+    "topic": "RAG",
+    "explanation": "Overlap reduces boundary information loss."
+  },
+  {
+    "question": "Retrieval quality affects:",
+    "options": [
+      "RAG answer quality",
+      "Brightness",
+      "CSS",
+      "CPU temperature"
+    ],
+    "answer": "A",
+    "topic": "RAG",
+    "explanation": "Bad retrieval gives bad context."
+  },
+  {
+    "question": "An AI agent combines:",
+    "options": [
+      "Model + tools + workflow/context",
+      "CSS + HTML",
+      "SQL + CSS",
+      "Keyboard + monitor"
+    ],
+    "answer": "A",
+    "topic": "Agents",
+    "explanation": "Agents use models with actions/tools."
+  },
+  {
+    "question": "A tool could be:",
+    "options": [
+      "Search API",
+      "CSS class",
+      "HTML heading",
+      "Font"
+    ],
+    "answer": "A",
+    "topic": "Agents",
+    "explanation": "Tools allow external actions/retrieval."
+  },
+  {
+    "question": "Typical agent loop:",
+    "options": [
+      "Plan→act→observe→decide",
+      "CSS→HTML→CPU",
+      "SQL→CSS→RAM",
+      "Compile→delete"
+    ],
+    "answer": "A",
+    "topic": "Agents",
+    "explanation": "Agents often iterate through actions and observations."
+  },
+  {
+    "question": "Agent memory helps:",
+    "options": [
+      "Maintain useful context",
+      "Increase physical RAM",
+      "Replace model",
+      "Change CSS"
+    ],
+    "answer": "A",
+    "topic": "Agents",
+    "explanation": "Memory can preserve information across steps."
+  },
+  {
+    "question": "Prompt injection attempts to:",
+    "options": [
+      "Manipulate instructions via untrusted input",
+      "Install RAM",
+      "Create tables",
+      "Change monitor"
+    ],
+    "answer": "A",
+    "topic": "AI security",
+    "explanation": "It exploits instruction-following."
+  },
+  {
+    "question": "A safe agent should:",
+    "options": [
+      "Limit tool permissions",
+      "Give unrestricted access",
+      "Ignore validation",
+      "Expose secrets"
+    ],
+    "answer": "A",
+    "topic": "AI security",
+    "explanation": "Least privilege reduces risk."
+  },
+  {
+    "question": "Grounding can:",
+    "options": [
+      "Reduce unsupported claims",
+      "Guarantee perfection",
+      "Remove validation",
+      "Increase screen"
+    ],
+    "answer": "A",
+    "topic": "AI safety",
+    "explanation": "Grounding helps but is not a guarantee."
+  },
+  {
+    "question": "Retrieval can use:",
+    "options": [
+      "Vector similarity",
+      "CSS specificity",
+      "Screen resolution",
+      "HTTP status"
+    ],
+    "answer": "A",
+    "topic": "RAG",
+    "explanation": "Embedding similarity is common."
+  },
+  {
+    "question": "Metadata filtering can:",
+    "options": [
+      "Restrict retrieval",
+      "Change architecture",
+      "Style page",
+      "Compile Python"
+    ],
+    "answer": "A",
+    "topic": "RAG",
+    "explanation": "Filters narrow candidates."
+  },
+  {
+    "question": "A reranker can:",
+    "options": [
+      "Reorder candidates by relevance",
+      "Render CSS",
+      "Create DB tables",
+      "Train React"
+    ],
+    "answer": "A",
+    "topic": "RAG",
+    "explanation": "Rerankers improve ordering."
+  },
+  {
+    "question": "Important tool results should be validated because:",
+    "options": [
+      "Tools can fail or be wrong",
+      "Tools are perfect",
+      "CSS needs it",
+      "HTML requires it"
+    ],
+    "answer": "A",
+    "topic": "AI engineering",
+    "explanation": "Validation reduces downstream errors."
+  },
+  {
+    "question": "Human-in-the-loop means:",
+    "options": [
+      "Human review/approval for important actions",
+      "No human",
+      "Only DB review",
+      "Only CSS review"
+    ],
+    "answer": "A",
+    "topic": "Responsible AI",
+    "explanation": "Human oversight is useful for risky actions."
+  }
+]

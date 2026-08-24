@@ -1,0 +1,242 @@
+[
+  {
+    "question": "GenAI primarily:",
+    "options": [
+      "Generates new content",
+      "Only sorts",
+      "Only authenticates",
+      "Only stores"
+    ],
+    "answer": "A",
+    "topic": "GenAI",
+    "explanation": "Generative systems create outputs."
+  },
+  {
+    "question": "LLM means:",
+    "options": [
+      "Large Language Model",
+      "Large Logic Machine",
+      "Language Learning Machine",
+      "Logical Language Model"
+    ],
+    "answer": "A",
+    "topic": "LLM",
+    "explanation": "LLM stands for Large Language Model."
+  },
+  {
+    "question": "Tokenization means:",
+    "options": [
+      "Breaking text into tokens",
+      "Encrypting",
+      "Creating pages",
+      "Deleting data"
+    ],
+    "answer": "A",
+    "topic": "LLM",
+    "explanation": "Tokenization prepares text for the model."
+  },
+  {
+    "question": "A prompt is:",
+    "options": [
+      "Instruction/input",
+      "Database table",
+      "CSS selector",
+      "HTTP code"
+    ],
+    "answer": "A",
+    "topic": "Prompting",
+    "explanation": "Prompt supplies task and context."
+  },
+  {
+    "question": "Prompt engineering is:",
+    "options": [
+      "Designing effective prompts",
+      "Building CPUs",
+      "SQL indexing",
+      "Styling"
+    ],
+    "answer": "A",
+    "topic": "Prompting",
+    "explanation": "It focuses on instruction design."
+  },
+  {
+    "question": "Transformers use:",
+    "options": [
+      "Attention",
+      "CSS",
+      "SQL",
+      "FTP"
+    ],
+    "answer": "A",
+    "topic": "Transformers",
+    "explanation": "Attention is central to transformers."
+  },
+  {
+    "question": "Self-attention helps:",
+    "options": [
+      "Relate tokens",
+      "Create CSS",
+      "Store DB",
+      "Open tabs"
+    ],
+    "answer": "A",
+    "topic": "Transformers",
+    "explanation": "It models token relationships."
+  },
+  {
+    "question": "Context window is:",
+    "options": [
+      "Amount of context a model can handle",
+      "Browser width",
+      "DB size",
+      "Pixel count"
+    ],
+    "answer": "A",
+    "topic": "LLM",
+    "explanation": "It limits usable context."
+  },
+  {
+    "question": "Embedding is:",
+    "options": [
+      "Numerical vector representation",
+      "HTML",
+      "CSS",
+      "HTTP"
+    ],
+    "answer": "A",
+    "topic": "Embeddings",
+    "explanation": "Embeddings represent semantics numerically."
+  },
+  {
+    "question": "Vector databases support:",
+    "options": [
+      "Similarity search",
+      "CSS layout",
+      "Brightness",
+      "HTML only"
+    ],
+    "answer": "A",
+    "topic": "Vector search",
+    "explanation": "They search vector representations."
+  },
+  {
+    "question": "RAG means:",
+    "options": [
+      "Retrieval-Augmented Generation",
+      "Random AI Generation",
+      "Retrieval Algorithm Gateway",
+      "Real-time AI Generator"
+    ],
+    "answer": "A",
+    "topic": "RAG",
+    "explanation": "RAG retrieves context then generates."
+  },
+  {
+    "question": "Fine-tuning means:",
+    "options": [
+      "Further training for a target use",
+      "CSS changes",
+      "Deleting embeddings",
+      "REST endpoint"
+    ],
+    "answer": "A",
+    "topic": "LLM",
+    "explanation": "Fine-tuning adapts model behavior through training."
+  },
+  {
+    "question": "Hallucination is:",
+    "options": [
+      "Unsupported/incorrect generated content",
+      "Overheating",
+      "DB deletion",
+      "Network speed"
+    ],
+    "answer": "A",
+    "topic": "AI safety",
+    "explanation": "Models can generate false claims."
+  },
+  {
+    "question": "Temperature affects:",
+    "options": [
+      "Generation randomness/variation",
+      "CPU heat",
+      "DB temperature",
+      "Brightness"
+    ],
+    "answer": "A",
+    "topic": "Generation",
+    "explanation": "It influences output variation."
+  },
+  {
+    "question": "Zero-shot prompting uses:",
+    "options": [
+      "No examples",
+      "One example",
+      "Only images",
+      "Database"
+    ],
+    "answer": "A",
+    "topic": "Prompting",
+    "explanation": "Zero-shot has no examples."
+  },
+  {
+    "question": "Few-shot prompting includes:",
+    "options": [
+      "Examples",
+      "No instructions",
+      "SQL only",
+      "CSS only"
+    ],
+    "answer": "A",
+    "topic": "Prompting",
+    "explanation": "Examples guide output behavior."
+  },
+  {
+    "question": "Grounding means:",
+    "options": [
+      "Providing reliable external context",
+      "Power cables",
+      "CSS",
+      "Formatting disks"
+    ],
+    "answer": "A",
+    "topic": "AI safety",
+    "explanation": "Grounding anchors answers to supplied information."
+  },
+  {
+    "question": "LLMs can perform:",
+    "options": [
+      "Summarization",
+      "Only sorting",
+      "Only CSS",
+      "Only indexing"
+    ],
+    "answer": "A",
+    "topic": "LLM",
+    "explanation": "Summarization is a common task."
+  },
+  {
+    "question": "GenAI can generate:",
+    "options": [
+      "Text, code, images and more",
+      "Only tables",
+      "Only HTML",
+      "Only passwords"
+    ],
+    "answer": "A",
+    "topic": "GenAI",
+    "explanation": "Different generative models support different modalities."
+  },
+  {
+    "question": "Important model outputs should be:",
+    "options": [
+      "Validated",
+      "Blindly trusted",
+      "Never checked",
+      "Used as keys"
+    ],
+    "answer": "A",
+    "topic": "AI safety",
+    "explanation": "Validation is essential when accuracy matters."
+  }
+]

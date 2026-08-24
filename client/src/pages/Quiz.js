@@ -7,64 +7,202 @@ import "../styles/quiz.css";
 
 import test1 from "../data/test1.json";
 import test2 from "../data/test2.json";
+import test3 from "../data/test3.json";
+import test4 from "../data/test4.json";
+import test5 from "../data/test5.json";
+import test6 from "../data/test6.json";
+import test7 from "../data/test7.json";
+import test8 from "../data/test8.json";
+import test9 from "../data/test9.json";
+import test10 from "../data/test10.json";
+import test11 from "../data/test11.json";
+import test12 from "../data/test12.json";
 
 import Timer from "../components/Timer";
 import ProgressBar from "../components/ProgressBar";
 import QuestionCard from "../components/QuestionCard";
 
+
 function Quiz() {
 
     const navigate = useNavigate();
 
-    const student = JSON.parse(localStorage.getItem("student"));
+    /* ==============================
+          SELECTED TEST
+    ============================== */
 
     const selectedTest = localStorage.getItem("selectedTest");
 
-    const questions =
-        selectedTest === "test2"
-            ? test2
-            : test1;
+    /* ==============================
+          TEST DATA
+    ============================== */
+
+    const testData = {
+
+        test1: test1,
+        test2: test2,
+        test3: test3,
+        test4: test4,
+        test5: test5,
+        test6: test6,
+        test7: test7,
+        test8: test8,
+        test9: test9,
+        test10: test10,
+        test11: test11,
+        test12: test12
+
+    };
+
+    const questions = testData[selectedTest] || test1;
 
     const totalQuestions = questions.length;
 
+
+    /* ==============================
+          TEST TITLES
+    ============================== */
+
+    const testTitles = {
+
+        test1: "Java Basics 1",
+
+        test2: "Java Fundamentals 1",
+
+        test3: "AI & Data Science",
+
+        test4: "Python & Data Science",
+
+        test5: "Statistics & Machine Learning",
+
+        test6: "Machine Learning & AI",
+
+        test7: "Full Stack Web Development",
+
+        test8: "React & JavaScript",
+
+        test9: "Web APIs & Databases",
+
+        test10: "Generative AI & LLMs",
+
+        test11: "RAG, Embeddings & AI Systems",
+
+        test12: "Coding, Debugging & Aptitude"
+
+    };
+
+
+    const testTitle =
+        testTitles[selectedTest] || "Mock Test";
+
+
+    /* ==============================
+          STUDENT
+    ============================== */
+
+    const [student, setStudent] = useState(null);
+
+
+    /* ==============================
+          STATES
+    ============================== */
+
     const [currentQuestion, setCurrentQuestion] = useState(0);
+
     const [answers, setAnswers] = useState({});
+
     const [submitted, setSubmitted] = useState(false);
+
     const [showSubmitModal, setShowSubmitModal] = useState(false);
+
+
+    /* ==============================
+          INITIAL CHECK
+    ============================== */
 
     useEffect(() => {
 
-        if (!student) {
+        const storedStudent =
+            JSON.parse(localStorage.getItem("student"));
+
+        if (!storedStudent) {
+
             navigate("/");
+
+            return;
+
         }
 
-    }, [navigate, student]);
+        if (!selectedTest || !testData[selectedTest]) {
 
+            navigate("/tests");
+
+            return;
+
+        }
+
+        setStudent(storedStudent);
+
+    }, [navigate, selectedTest]);
+
+
+    /* ==============================
+          ANSWER
+    ============================== */
 
     const handleAnswer = (option) => {
 
         setAnswers((prev) => ({
+
             ...prev,
+
             [currentQuestion]: option
+
         }));
 
     };
 
+
+    /* ==============================
+          NEXT
+    ============================== */
+
     const nextQuestion = () => {
 
-        if (currentQuestion < totalQuestions - 1) {
-            setCurrentQuestion(currentQuestion + 1);
+        if (
+            currentQuestion <
+            totalQuestions - 1
+        ) {
+
+            setCurrentQuestion(
+                currentQuestion + 1
+            );
+
         }
 
     };
+
+
+    /* ==============================
+          PREVIOUS
+    ============================== */
 
     const previousQuestion = () => {
 
         if (currentQuestion > 0) {
-            setCurrentQuestion(currentQuestion - 1);
+
+            setCurrentQuestion(
+                currentQuestion - 1
+            );
+
         }
 
     };
+
+
+    /* ==============================
+          QUESTION PALETTE
+    ============================== */
 
     const jumpToQuestion = (index) => {
 
@@ -72,204 +210,414 @@ function Quiz() {
 
     };
 
+
+    /* ==============================
+          CALCULATE SCORE
+    ============================== */
+
     const calculateScore = () => {
 
         let score = 0;
 
-        questions.forEach((question, index) => {
+        questions.forEach(
+            (question, index) => {
 
-            if (answers[index] === question.answer) {
-                score++;
+                if (
+                    answers[index] ===
+                    question.answer
+                ) {
+
+                    score++;
+
+                }
+
             }
-
-        });
+        );
 
         return score;
 
     };
 
+
+    /* ==============================
+          SUBMIT TEST
+    ============================== */
+
     const submitTest = async () => {
 
         if (submitted) return;
+
         setShowSubmitModal(false);
 
-        const score = calculateScore();
+        const score =
+            calculateScore();
+
 
         const result = {
 
-    student,
+            student,
 
-    testName: selectedTest,
+            testName: selectedTest,
 
-    score,
+            testTitle: testTitle,
 
-    total: totalQuestions,
+            score,
 
-    percentage: ((score / totalQuestions) * 100).toFixed(2),
+            total: totalQuestions,
 
-    answers,
+            percentage:
+                (
+                    (score / totalQuestions) *
+                    100
+                ).toFixed(2),
 
-    submittedAt: new Date().toLocaleString()
+            answers,
 
-};
+            submittedAt:
+                new Date().toLocaleString()
 
-        localStorage.setItem("result", JSON.stringify(result));
+        };
 
-try {
 
-   await axios.post(
-    `${API_URL}/api/submit`,
-    result
-);
+        /* Save result locally */
 
-    console.log("Result Saved");
+        localStorage.setItem(
+            "result",
+            JSON.stringify(result)
+        );
 
-} catch(err){
 
-    console.log(err);
+        /* Save result to backend */
 
-}
+        try {
 
-localStorage.removeItem("examStartTime");
+            await axios.post(
 
-setSubmitted(true);
+                `${API_URL}/api/submit`,
 
-navigate("/result");
+                result
+
+            );
+
+            console.log(
+                "Result Saved Successfully"
+            );
+
+        } catch (err) {
+
+            console.log(
+                "Unable to save result:",
+                err
+            );
+
+        }
+
+
+        /* Remove exam timer */
+
+        localStorage.removeItem(
+            "examStartTime"
+        );
+
+
+        setSubmitted(true);
+
+
+        /* Go to result */
+
+        navigate("/result");
 
     };
+
+
+    /* ==============================
+          AUTO SUBMIT
+    ============================== */
 
     const autoSubmit = async () => {
 
-        const score = calculateScore();
+        if (submitted) return;
+
+        const score =
+            calculateScore();
+
 
         const result = {
 
-    student,
+            student,
 
-    testName: selectedTest,
+            testName: selectedTest,
 
-    score,
+            testTitle: testTitle,
 
-    total: totalQuestions,
+            score,
 
-    percentage: ((score / totalQuestions) * 100).toFixed(2),
+            total: totalQuestions,
 
-    answers,
+            percentage:
+                (
+                    (score / totalQuestions) *
+                    100
+                ).toFixed(2),
 
-    submittedAt: new Date().toLocaleString()
+            answers,
 
-};
-localStorage.setItem("result", JSON.stringify(result));
-try {
+            submittedAt:
+                new Date().toLocaleString()
 
-   await axios.post(
-    `${API_URL}/api/submit`,
-    result
-);
+        };
 
-} catch(err){
 
-    console.log(err);
+        /* Save locally */
 
-}
+        localStorage.setItem(
+            "result",
+            JSON.stringify(result)
+        );
 
-localStorage.removeItem("examStartTime");
-setShowSubmitModal(false);
 
-navigate("/result");
+        /* Save backend */
+
+        try {
+
+            await axios.post(
+
+                `${API_URL}/api/submit`,
+
+                result
+
+            );
+
+        } catch (err) {
+
+            console.log(
+                "Auto submit error:",
+                err
+            );
+
+        }
+
+
+        localStorage.removeItem(
+            "examStartTime"
+        );
+
+
+        setSubmitted(true);
+
+        setShowSubmitModal(false);
+
+
+        navigate("/result");
+
     };
+
+
+    /* ==============================
+          WAIT FOR STUDENT
+    ============================== */
+
+    if (!student) {
+
+        return null;
+
+    }
+
+
+    /* ==============================
+          UI
+    ============================== */
 
     return (
 
         <div className="quiz-page">
 
-            {/* ================= HEADER ================= */}
+
+            {/* =========================
+                    HEADER
+            ========================= */}
 
             <div className="quiz-header">
 
                 <div>
 
                     <h2>
-    {selectedTest === "test2"
-        ? "Mock Test 2"
-        : "Mock Test 1"}
-</h2>
+
+                        {testTitle}
+
+                    </h2>
 
                     <p>
+
                         Candidate :
-                        <strong> {student?.name}</strong>
+
+                        <strong>
+                            {" "}
+                            {student.name}
+                        </strong>
+
                     </p>
 
                 </div>
 
-                <Timer onTimeUp={autoSubmit} />
+
+                <Timer
+                    onTimeUp={autoSubmit}
+                />
 
             </div>
 
-            {/* =============== Progress =============== */}
+
+            {/* =========================
+                  PROGRESS BAR
+            ========================= */}
 
             <ProgressBar
-                current={currentQuestion + 1}
-                total={totalQuestions}
+
+                current={
+                    currentQuestion + 1
+                }
+
+                total={
+                    totalQuestions
+                }
+
             />
 
-            {/* ============== MAIN CONTAINER ============== */}
+
+            {/* =========================
+                  MAIN CONTAINER
+            ========================= */}
 
             <div className="quiz-container">
 
-                {/* LEFT PANEL */}
+
+                {/* =========================
+                     LEFT PANEL
+                ========================= */}
 
                 <div className="student-panel">
 
-                    <h3>Candidate Details</h3>
+                    <h3>
+                        Candidate Details
+                    </h3>
 
                     <hr />
 
-                    <p><strong>Name</strong></p>
-                    <span>{student?.name}</span>
 
-                    <p><strong>USN / URN</strong></p>
-                    <span>{student?.usn}</span>
+                    <p>
+                        <strong>
+                            Name
+                        </strong>
+                    </p>
 
-                    <p><strong>College</strong></p>
-                    <span>{student?.college}</span>
+                    <span>
+                        {student.name}
+                    </span>
 
-                    <p><strong>Branch</strong></p>
-                    <span>{student?.branch}</span>
 
-                    <p><strong>Semester</strong></p>
-                    <span>{student?.semester}</span>
+                    <p>
+                        <strong>
+                            USN / URN
+                        </strong>
+                    </p>
+
+                    <span>
+                        {student.usn}
+                    </span>
+
+
+                    <p>
+                        <strong>
+                            College
+                        </strong>
+                    </p>
+
+                    <span>
+                        {student.college}
+                    </span>
+
+
+                    <p>
+                        <strong>
+                            Branch
+                        </strong>
+                    </p>
+
+                    <span>
+                        {student.branch}
+                    </span>
+
+
+                    <p>
+                        <strong>
+                            Semester
+                        </strong>
+                    </p>
+
+                    <span>
+                        {student.semester}
+                    </span>
+
+
+                    {/* =========================
+                         PROGRESS
+                    ========================= */}
 
                     <div className="status-box">
 
-                        <h4>Progress</h4>
+                        <h4>
+                            Progress
+                        </h4>
+
 
                         <p>
+
                             Answered :
+
                             {
-                                Object.keys(answers).length
-                            } / {totalQuestions}
+                                Object.keys(
+                                    answers
+                                ).length
+                            }
+
+                            {" / "}
+
+                            {totalQuestions}
+
                         </p>
 
+
                         <p>
+
                             Remaining :
+
                             {
                                 totalQuestions -
-                                Object.keys(answers).length
+                                Object.keys(
+                                    answers
+                                ).length
                             }
+
                         </p>
 
                     </div>
 
                 </div>
 
-                {/* CENTER PANEL */}
+
+                {/* =========================
+                    CENTER QUESTION
+                ========================= */}
 
                 <div className="question-section">
 
+
                     <h3>
 
-                        Question {currentQuestion + 1}
+                        Question{" "}
+
+                        {currentQuestion + 1}
 
                         {" / "}
 
@@ -277,25 +625,46 @@ navigate("/result");
 
                     </h3>
 
+
                     <QuestionCard
 
-                        question={questions[currentQuestion]}
+                        question={
+                            questions[
+                                currentQuestion
+                            ]
+                        }
 
-                        selected={answers[currentQuestion]}
+                        selected={
+                            answers[
+                                currentQuestion
+                            ]
+                        }
 
-                        onSelect={handleAnswer}
+                        onSelect={
+                            handleAnswer
+                        }
 
                     />
 
+
+                    {/* =========================
+                         NAVIGATION
+                    ========================= */}
+
                     <div className="navigation-buttons">
+
 
                         <button
 
                             className="previous"
 
-                            disabled={currentQuestion === 0}
+                            disabled={
+                                currentQuestion === 0
+                            }
 
-                            onClick={previousQuestion}
+                            onClick={
+                                previousQuestion
+                            }
 
                         >
 
@@ -303,15 +672,19 @@ navigate("/result");
 
                         </button>
 
+
                         <button
 
                             className="next"
 
                             disabled={
-                                currentQuestion === totalQuestions - 1
+                                currentQuestion ===
+                                totalQuestions - 1
                             }
 
-                            onClick={nextQuestion}
+                            onClick={
+                                nextQuestion
+                            }
 
                         >
 
@@ -319,127 +692,252 @@ navigate("/result");
 
                         </button>
 
+
                     </div>
 
                 </div>
-                                {/* RIGHT PANEL */}
+
+
+                {/* =========================
+                    RIGHT PALETTE
+                ========================= */}
 
                 <div className="question-palette">
 
-                    <h3>Question Palette</h3>
+
+                    <h3>
+                        Question Palette
+                    </h3>
+
 
                     <div className="palette-grid">
 
-                        {questions.map((q, index) => (
 
-                            <button
+                        {questions.map(
+                            (q, index) => (
 
-                                key={index}
+                                <button
 
-                                className={`
-                                palette-btn
-                                ${
-                                    currentQuestion === index
-                                        ? "current"
-                                        : answers[index]
-                                        ? "answered"
-                                        : "unanswered"
-                                }
-                                `}
+                                    key={index}
 
-                                onClick={() => jumpToQuestion(index)}
+                                    className={`
+                                        palette-btn
+                                        ${
+                                            currentQuestion ===
+                                            index
 
-                            >
+                                                ? "current"
 
-                                {index + 1}
+                                                : answers[index]
 
-                            </button>
+                                                ? "answered"
 
-                        ))}
+                                                : "unanswered"
+                                        }
+                                    `}
+
+                                    onClick={() =>
+                                        jumpToQuestion(
+                                            index
+                                        )
+                                    }
+
+                                >
+
+                                    {index + 1}
+
+                                </button>
+
+                            )
+                        )}
 
                     </div>
+
+
+                    {/* =========================
+                         LEGEND
+                    ========================= */}
 
                     <div className="palette-legend">
 
+
                         <div className="legend-item">
-                            <span className="legend current-box"></span>
+
+                            <span
+                                className="legend current-box"
+                            ></span>
+
                             Current
+
                         </div>
 
+
                         <div className="legend-item">
-                            <span className="legend answered-box"></span>
+
+                            <span
+                                className="legend answered-box"
+                            ></span>
+
                             Answered
+
                         </div>
 
+
                         <div className="legend-item">
-                            <span className="legend unanswered-box"></span>
+
+                            <span
+                                className="legend unanswered-box"
+                            ></span>
+
                             Unanswered
+
                         </div>
+
 
                     </div>
 
-       <button
-    className="submit-btn"
-    disabled={Object.keys(answers).length !== totalQuestions}
-    onClick={() => setShowSubmitModal(true)}
->
-    Submit Assessment
-</button>
-{showSubmitModal && (
 
-<div
-    className="modal-overlay"
-    onClick={() => setShowSubmitModal(false)}
->
+                    {/* =========================
+                         SUBMIT BUTTON
+                    ========================= */}
 
-    <div
-    className="submit-modal"
-    onClick={(e) => e.stopPropagation()}
->
+                    <button
 
-        <h2>📝 Submit Assessment</h2>
+                        className="submit-btn"
 
-        <p>
-    You have answered all questions successfully.<br/>
-    After submission, your responses cannot be changed.
-</p>
+                        disabled={
+                            Object.keys(
+                                answers
+                            ).length !==
+                            totalQuestions
+                        }
 
-        <div className="modal-buttons">
+                        onClick={() =>
+                            setShowSubmitModal(
+                                true
+                            )
+                        }
 
-            <button
-                className="cancel-btn"
-                onClick={() => setShowSubmitModal(false)}
-            >
-                Cancel
-            </button>
+                    >
 
-            <button
-                className="confirm-btn"
-                onClick={() => {
-                    setShowSubmitModal(false);
-                    submitTest();
-                }}
-            >
-                Submit
-            </button>
+                        Submit Assessment
 
-        </div>
+                    </button>
 
-    </div>
 
-</div>
+                    {/* =========================
+                         SUBMIT MODAL
+                    ========================= */}
 
-)}
+                    {showSubmitModal && (
+
+                        <div
+
+                            className="modal-overlay"
+
+                            onClick={() =>
+                                setShowSubmitModal(
+                                    false
+                                )
+                            }
+
+                        >
+
+                            <div
+
+                                className="submit-modal"
+
+                                onClick={(e) =>
+                                    e.stopPropagation()
+                                }
+
+                            >
+
+                                <h2>
+                                    📝 Submit Assessment
+                                </h2>
+
+
+                                <p>
+
+                                    You have answered
+                                    all questions
+                                    successfully.
+
+                                    <br />
+
+                                    After submission,
+                                    your responses
+                                    cannot be changed.
+
+                                </p>
+
+
+                                <div className="modal-buttons">
+
+
+                                    <button
+
+                                        className="cancel-btn"
+
+                                        onClick={() =>
+                                            setShowSubmitModal(
+                                                false
+                                            )
+                                        }
+
+                                    >
+
+                                        Cancel
+
+                                    </button>
+
+
+                                    <button
+
+                                        className="confirm-btn"
+
+                                        onClick={
+                                            submitTest
+                                        }
+
+                                    >
+
+                                        Submit
+
+                                    </button>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    )}
+
                 </div>
 
             </div>
-<footer className="footer">
-    © 2026 EETIRP LTD. | Empowering Student Innovation
-</footer>
+
+
+            {/* =========================
+                    FOOTER
+            ========================= */}
+
+            <footer className="footer">
+
+                © 2026 EETIRP LTD. |
+                Empowering Student Innovation
+
+            </footer>
+
+
         </div>
 
     );
 
 }
+
 
 export default Quiz;

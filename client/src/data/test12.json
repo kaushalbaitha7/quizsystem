@@ -1,0 +1,242 @@
+[
+  {
+    "question": "Typical ML workflow:",
+    "options": [
+      "Collect→clean→train→evaluate",
+      "Deploy→delete→collect",
+      "CSS→HTML→train",
+      "RAG→CSS→compile"
+    ],
+    "answer": "A",
+    "topic": "ML",
+    "explanation": "Preparation precedes training and evaluation."
+  },
+  {
+    "question": "Best Python tool for tabular analysis:",
+    "options": [
+      "Pandas",
+      "React",
+      "Express",
+      "MongoDB"
+    ],
+    "answer": "A",
+    "topic": "Data Science",
+    "explanation": "Pandas provides DataFrames."
+  },
+  {
+    "question": "Classification task:",
+    "options": [
+      "Predict disease/no disease",
+      "Predict house price",
+      "Predict rainfall amount",
+      "Predict salary"
+    ],
+    "answer": "A",
+    "topic": "ML",
+    "explanation": "Disease status is categorical."
+  },
+  {
+    "question": "Regression task:",
+    "options": [
+      "Predict house price",
+      "Predict spam",
+      "Predict class",
+      "Predict fraud yes/no"
+    ],
+    "answer": "A",
+    "topic": "ML",
+    "explanation": "House price is numerical."
+  },
+  {
+    "question": "React state hook:",
+    "options": [
+      "useState",
+      "useEffectOnly",
+      "useFetch",
+      "useDOM"
+    ],
+    "answer": "A",
+    "topic": "React",
+    "explanation": "useState manages state."
+  },
+  {
+    "question": "HTTP method commonly used to create:",
+    "options": [
+      "POST",
+      "GET",
+      "DELETE",
+      "PATCH only"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "POST commonly creates/submits."
+  },
+  {
+    "question": "Not Found status:",
+    "options": [
+      "404",
+      "200",
+      "201",
+      "500"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "404 means not found."
+  },
+  {
+    "question": "Document NoSQL database:",
+    "options": [
+      "MongoDB",
+      "MySQL",
+      "PostgreSQL",
+      "Oracle"
+    ],
+    "answer": "A",
+    "topic": "Databases",
+    "explanation": "MongoDB is document-oriented."
+  },
+  {
+    "question": "Numerical vector representation:",
+    "options": [
+      "Embedding",
+      "HTML",
+      "CSS",
+      "HTTP"
+    ],
+    "answer": "A",
+    "topic": "GenAI",
+    "explanation": "Embeddings encode information numerically."
+  },
+  {
+    "question": "Retrieval before generation:",
+    "options": [
+      "RAG",
+      "Flexbox",
+      "Git",
+      "CRUD"
+    ],
+    "answer": "A",
+    "topic": "GenAI",
+    "explanation": "RAG retrieves relevant context."
+  },
+  {
+    "question": "Architecture using self-attention:",
+    "options": [
+      "Transformer",
+      "Decision Tree",
+      "K-Means",
+      "Linear Regression"
+    ],
+    "answer": "A",
+    "topic": "GenAI",
+    "explanation": "Transformers use attention."
+  },
+  {
+    "question": "Prompt style with examples:",
+    "options": [
+      "Few-shot",
+      "Zero-shot",
+      "No-shot",
+      "Compile-shot"
+    ],
+    "answer": "A",
+    "topic": "Prompting",
+    "explanation": "Few-shot includes examples."
+  },
+  {
+    "question": "Unsupported model claim:",
+    "options": [
+      "Hallucination",
+      "Training",
+      "Cleaning",
+      "API success"
+    ],
+    "answer": "A",
+    "topic": "AI safety",
+    "explanation": "Hallucination is an unreliable generated claim."
+  },
+  {
+    "question": "Safest API-key practice:",
+    "options": [
+      "Secure server-side secret management",
+      "Public frontend code",
+      "Public GitHub",
+      "CSS"
+    ],
+    "answer": "A",
+    "topic": "Security",
+    "explanation": "Secrets must not be exposed."
+  },
+  {
+    "question": "LIFO:",
+    "options": [
+      "Stack",
+      "Queue",
+      "Graph",
+      "Heap only"
+    ],
+    "answer": "A",
+    "topic": "Algorithms",
+    "explanation": "Stack is LIFO."
+  },
+  {
+    "question": "O(log n) sorted search:",
+    "options": [
+      "Binary search",
+      "Linear search",
+      "Bubble sort",
+      "Selection scan"
+    ],
+    "answer": "A",
+    "topic": "Algorithms",
+    "explanation": "Binary search halves the search space."
+  },
+  {
+    "question": "Category comparison chart:",
+    "options": [
+      "Bar chart",
+      "Histogram only",
+      "Line only",
+      "Scatter only"
+    ],
+    "answer": "A",
+    "topic": "Visualization",
+    "explanation": "Bar charts compare categories."
+  },
+  {
+    "question": "Identity vs permissions:",
+    "options": [
+      "Authentication vs authorization",
+      "RAG vs LLM",
+      "HTML vs CSS",
+      "Mean vs median"
+    ],
+    "answer": "A",
+    "topic": "Security",
+    "explanation": "Identity and permissions are distinct."
+  },
+  {
+    "question": "Main purpose of Git:",
+    "options": [
+      "Version control",
+      "Database hosting",
+      "Model inference",
+      "CSS rendering"
+    ],
+    "answer": "A",
+    "topic": "Git",
+    "explanation": "Git tracks code changes."
+  },
+  {
+    "question": "Your three pathways combine:",
+    "options": [
+      "Data Science + Full Stack + GenAI",
+      "Only networking",
+      "Only VLSI",
+      "Only mechanical design"
+    ],
+    "answer": "A",
+    "topic": "Pathways",
+    "explanation": "They combine data, application engineering and generative AI."
+  }
+]

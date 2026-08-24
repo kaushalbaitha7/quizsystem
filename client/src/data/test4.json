@@ -1,0 +1,242 @@
+[
+  {
+    "question": "HTML mainly provides:",
+    "options": [
+      "Structure",
+      "Database",
+      "ML",
+      "Authentication"
+    ],
+    "answer": "A",
+    "topic": "HTML",
+    "explanation": "HTML structures content."
+  },
+  {
+    "question": "CSS mainly controls:",
+    "options": [
+      "Style/presentation",
+      "Database queries",
+      "Server logic",
+      "Training"
+    ],
+    "answer": "A",
+    "topic": "CSS",
+    "explanation": "CSS controls appearance."
+  },
+  {
+    "question": "Hyperlink tag:",
+    "options": [
+      "<a>",
+      "<url>",
+      "<href>",
+      "<linker>"
+    ],
+    "answer": "A",
+    "topic": "HTML",
+    "explanation": "a creates links."
+  },
+  {
+    "question": "Paragraph tag:",
+    "options": [
+      "<para>",
+      "<p>",
+      "<text>",
+      "<paragraph>"
+    ],
+    "answer": "B",
+    "topic": "HTML",
+    "explanation": "p is paragraph."
+  },
+  {
+    "question": "Text color property:",
+    "options": [
+      "font-color",
+      "color",
+      "text-coloring",
+      "foreground"
+    ],
+    "answer": "B",
+    "topic": "CSS",
+    "explanation": "color changes text color."
+  },
+  {
+    "question": "Padding is:",
+    "options": [
+      "Inside border",
+      "Outside margin",
+      "Background",
+      "Document"
+    ],
+    "answer": "A",
+    "topic": "CSS",
+    "explanation": "Padding is inside the border."
+  },
+  {
+    "question": "Margin is:",
+    "options": [
+      "Outside border",
+      "Inside content",
+      "Font size",
+      "Border color"
+    ],
+    "answer": "A",
+    "topic": "CSS",
+    "explanation": "Margin is outer spacing."
+  },
+  {
+    "question": "Flexbox is mainly for:",
+    "options": [
+      "One-dimensional layout",
+      "Database",
+      "Encryption",
+      "ML"
+    ],
+    "answer": "A",
+    "topic": "CSS",
+    "explanation": "Flexbox arranges along one axis."
+  },
+  {
+    "question": "Grid is especially useful for:",
+    "options": [
+      "Two-dimensional layout",
+      "API calls",
+      "Indexes",
+      "Tokens"
+    ],
+    "answer": "A",
+    "topic": "CSS",
+    "explanation": "Grid controls rows and columns."
+  },
+  {
+    "question": "Responsive design means:",
+    "options": [
+      "Adapting to screens",
+      "Only mobile",
+      "Only animations",
+      "Removing HTML"
+    ],
+    "answer": "A",
+    "topic": "Web",
+    "explanation": "Responsive layouts adapt to viewport."
+  },
+  {
+    "question": "Class selector:",
+    "options": [
+      ".box",
+      "#box",
+      "box()",
+      "@box"
+    ],
+    "answer": "A",
+    "topic": "CSS",
+    "explanation": "Dot selects a class."
+  },
+  {
+    "question": "ID selector:",
+    "options": [
+      ".box",
+      "#box",
+      "*box",
+      "id(box)"
+    ],
+    "answer": "B",
+    "topic": "CSS",
+    "explanation": "Hash selects an id."
+  },
+  {
+    "question": "Font size property:",
+    "options": [
+      "font-size",
+      "text-size",
+      "size",
+      "font"
+    ],
+    "answer": "A",
+    "topic": "CSS",
+    "explanation": "font-size sets text size."
+  },
+  {
+    "question": "Rounded corners property:",
+    "options": [
+      "border-radius",
+      "corner",
+      "round",
+      "radius-box"
+    ],
+    "answer": "A",
+    "topic": "CSS",
+    "explanation": "border-radius rounds corners."
+  },
+  {
+    "question": "Width property:",
+    "options": [
+      "width",
+      "size-x",
+      "element-width-only",
+      "measure"
+    ],
+    "answer": "A",
+    "topic": "CSS",
+    "explanation": "width sets horizontal size."
+  },
+  {
+    "question": "Semantic HTML primarily:",
+    "options": [
+      "Communicates meaning/structure",
+      "Encrypts",
+      "Creates APIs",
+      "Trains"
+    ],
+    "answer": "A",
+    "topic": "HTML",
+    "explanation": "Semantic elements describe roles."
+  },
+  {
+    "question": "Forms are used to:",
+    "options": [
+      "Collect input",
+      "Train models",
+      "Store CSS",
+      "Run MongoDB"
+    ],
+    "answer": "A",
+    "topic": "HTML",
+    "explanation": "Forms collect user input."
+  },
+  {
+    "question": "Button element:",
+    "options": [
+      "<button>",
+      "<btn>",
+      "<press>",
+      "<action>"
+    ],
+    "answer": "A",
+    "topic": "HTML",
+    "explanation": "button is standard."
+  },
+  {
+    "question": "Media queries support:",
+    "options": [
+      "Responsive conditional CSS",
+      "DB querying",
+      "Authentication",
+      "Python loops"
+    ],
+    "answer": "A",
+    "topic": "CSS",
+    "explanation": "They apply styles based on conditions."
+  },
+  {
+    "question": "Box model includes:",
+    "options": [
+      "Content,padding,border,margin",
+      "Only content/color",
+      "Header/footer",
+      "HTML/JS"
+    ],
+    "answer": "A",
+    "topic": "CSS",
+    "explanation": "These are the four standard layers."
+  }
+]

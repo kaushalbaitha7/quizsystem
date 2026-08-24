@@ -1,0 +1,242 @@
+[
+  {
+    "question": "GET is used to:",
+    "options": [
+      "Retrieve",
+      "Delete",
+      "Style",
+      "Train"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "GET retrieves resources."
+  },
+  {
+    "question": "POST commonly:",
+    "options": [
+      "Creates/submits",
+      "Retrieves only",
+      "Deletes",
+      "Styles"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "POST submits data."
+  },
+  {
+    "question": "PUT commonly:",
+    "options": [
+      "Replaces/updates",
+      "Retrieves only",
+      "Deletes only",
+      "Authenticates only"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "PUT commonly replaces a representation."
+  },
+  {
+    "question": "PATCH commonly:",
+    "options": [
+      "Partially updates",
+      "Deletes",
+      "Retrieves",
+      "Creates HTML"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "PATCH applies partial changes."
+  },
+  {
+    "question": "DELETE:",
+    "options": [
+      "Removes a resource",
+      "Creates",
+      "Retrieves",
+      "Renders CSS"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "DELETE removes resources."
+  },
+  {
+    "question": "200 means:",
+    "options": [
+      "OK",
+      "Created",
+      "Not Found",
+      "Server Error"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "200 is successful."
+  },
+  {
+    "question": "201 means:",
+    "options": [
+      "Created",
+      "Unauthorized",
+      "Not Found",
+      "Server Error"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "201 indicates creation."
+  },
+  {
+    "question": "400 means:",
+    "options": [
+      "Bad Request",
+      "Success",
+      "Created",
+      "Server Error"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "400 indicates invalid request."
+  },
+  {
+    "question": "401 means:",
+    "options": [
+      "Unauthorized",
+      "Forbidden only",
+      "Not Found",
+      "Created"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "401 concerns authentication."
+  },
+  {
+    "question": "403 means:",
+    "options": [
+      "Forbidden",
+      "Created",
+      "OK",
+      "Redirect"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "403 means access is refused."
+  },
+  {
+    "question": "404 means:",
+    "options": [
+      "Not Found",
+      "OK",
+      "Created",
+      "Unauthorized"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "404 means resource not found."
+  },
+  {
+    "question": "500 means:",
+    "options": [
+      "Internal Server Error",
+      "Created",
+      "OK",
+      "Bad Request"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "500 indicates server failure."
+  },
+  {
+    "question": "Relational databases use:",
+    "options": [
+      "Tables",
+      "Components",
+      "Tokens",
+      "CSS"
+    ],
+    "answer": "A",
+    "topic": "Databases",
+    "explanation": "Tables organize relational data."
+  },
+  {
+    "question": "MongoDB is:",
+    "options": [
+      "Document-oriented NoSQL database",
+      "CSS framework",
+      "Compiler",
+      "UI library"
+    ],
+    "answer": "A",
+    "topic": "Databases",
+    "explanation": "MongoDB stores documents."
+  },
+  {
+    "question": "CRUD means:",
+    "options": [
+      "Create Read Update Delete",
+      "Code Run Update Deploy",
+      "Create Run Upload Download",
+      "Connect Read Use Delete"
+    ],
+    "answer": "A",
+    "topic": "Databases",
+    "explanation": "CRUD is basic data operations."
+  },
+  {
+    "question": "Authentication answers:",
+    "options": [
+      "Who are you?",
+      "What can you do?",
+      "Which color?",
+      "Which port?"
+    ],
+    "answer": "A",
+    "topic": "Security",
+    "explanation": "Authentication establishes identity."
+  },
+  {
+    "question": "Authorization answers:",
+    "options": [
+      "What may you do/access?",
+      "Who are you?",
+      "Browser?",
+      "Screen size?"
+    ],
+    "answer": "A",
+    "topic": "Security",
+    "explanation": "Authorization governs permissions."
+  },
+  {
+    "question": "JSON is used for:",
+    "options": [
+      "Data exchange",
+      "Styling",
+      "CPU control",
+      "Image editing"
+    ],
+    "answer": "A",
+    "topic": "Web",
+    "explanation": "JSON is common in APIs."
+  },
+  {
+    "question": "Primary key should:",
+    "options": [
+      "Uniquely identify record",
+      "Store CSS",
+      "Define route",
+      "Train model"
+    ],
+    "answer": "A",
+    "topic": "Databases",
+    "explanation": "It uniquely identifies a row/record."
+  },
+  {
+    "question": "Database index generally:",
+    "options": [
+      "Speeds lookups",
+      "Changes fonts",
+      "Encrypts HTML",
+      "Generates images"
+    ],
+    "answer": "A",
+    "topic": "Databases",
+    "explanation": "Indexes can accelerate queries."
+  }
+]

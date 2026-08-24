@@ -1,0 +1,242 @@
+[
+  {
+    "question": "Which is primarily frontend?",
+    "options": [
+      "React",
+      "MongoDB",
+      "Express",
+      "MySQL"
+    ],
+    "answer": "A",
+    "topic": "Full Stack",
+    "explanation": "React is a UI library."
+  },
+  {
+    "question": "Which is a database?",
+    "options": [
+      "MongoDB",
+      "React",
+      "Express",
+      "HTML"
+    ],
+    "answer": "A",
+    "topic": "Full Stack",
+    "explanation": "MongoDB is a database."
+  },
+  {
+    "question": "Which is backend framework?",
+    "options": [
+      "Express",
+      "CSS",
+      "HTML",
+      "React only"
+    ],
+    "answer": "A",
+    "topic": "Full Stack",
+    "explanation": "Express is a Node.js web framework."
+  },
+  {
+    "question": "Which is ML?",
+    "options": [
+      "Random Forest",
+      "React",
+      "Express",
+      "HTML"
+    ],
+    "answer": "A",
+    "topic": "ML",
+    "explanation": "Random Forest is an ML ensemble."
+  },
+  {
+    "question": "Which is clustering?",
+    "options": [
+      "K-Means",
+      "Linear Regression",
+      "Logistic Regression",
+      "Classifier"
+    ],
+    "answer": "A",
+    "topic": "ML",
+    "explanation": "K-Means is unsupervised clustering."
+  },
+  {
+    "question": "Continuous prediction is:",
+    "options": [
+      "Regression",
+      "Classification",
+      "Clustering",
+      "Tokenization"
+    ],
+    "answer": "A",
+    "topic": "ML",
+    "explanation": "Regression predicts numeric outcomes."
+  },
+  {
+    "question": "Central to language GenAI:",
+    "options": [
+      "LLMs",
+      "CSS",
+      "HTML",
+      "SQL only"
+    ],
+    "answer": "A",
+    "topic": "GenAI",
+    "explanation": "LLMs generate language."
+  },
+  {
+    "question": "RAG combines:",
+    "options": [
+      "Retrieval and generation",
+      "React and Angular",
+      "SQL and CSS",
+      "Python and HTML"
+    ],
+    "answer": "A",
+    "topic": "GenAI",
+    "explanation": "RAG retrieves evidence before generation."
+  },
+  {
+    "question": "Embeddings are:",
+    "options": [
+      "Vector representations",
+      "HTML elements",
+      "CSS selectors",
+      "SQL commands"
+    ],
+    "answer": "A",
+    "topic": "GenAI",
+    "explanation": "Embeddings encode semantics."
+  },
+  {
+    "question": "AI + Full Stack can combine:",
+    "options": [
+      "AI + frontend + backend",
+      "CSS + keyboard",
+      "HTML + printer",
+      "DB + monitor"
+    ],
+    "answer": "A",
+    "topic": "AI applications",
+    "explanation": "A full AI product can integrate all layers."
+  },
+  {
+    "question": "Data cleaning is part of:",
+    "options": [
+      "Data Science",
+      "CSS",
+      "React rendering",
+      "HTTP"
+    ],
+    "answer": "A",
+    "topic": "Data Science",
+    "explanation": "Cleaning prepares data."
+  },
+  {
+    "question": "Python plotting library:",
+    "options": [
+      "Matplotlib",
+      "Express",
+      "MongoDB",
+      "React"
+    ],
+    "answer": "A",
+    "topic": "Visualization",
+    "explanation": "Matplotlib supports Python plots."
+  },
+  {
+    "question": "404 means:",
+    "options": [
+      "Not Found",
+      "OK",
+      "Created",
+      "Server Error"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "404 is Not Found."
+  },
+  {
+    "question": "Data retrieval method:",
+    "options": [
+      "GET",
+      "POST",
+      "DELETE",
+      "PATCH"
+    ],
+    "answer": "A",
+    "topic": "HTTP",
+    "explanation": "GET commonly retrieves."
+  },
+  {
+    "question": "Private documents can ground an LLM using:",
+    "options": [
+      "RAG",
+      "CSS",
+      "Flexbox",
+      "Git"
+    ],
+    "answer": "A",
+    "topic": "GenAI",
+    "explanation": "RAG retrieves private/current context."
+  },
+  {
+    "question": "Embeddings can be stored in:",
+    "options": [
+      "Vector database",
+      "CSS file",
+      "HTML template",
+      "HTTP header"
+    ],
+    "answer": "A",
+    "topic": "GenAI",
+    "explanation": "Vector DB supports similarity retrieval."
+  },
+  {
+    "question": "Model fits training data too closely:",
+    "options": [
+      "Overfitting",
+      "Underfitting",
+      "Tokenization",
+      "Routing"
+    ],
+    "answer": "A",
+    "topic": "ML",
+    "explanation": "Overfitting harms generalization."
+  },
+  {
+    "question": "UI adapts to screen size:",
+    "options": [
+      "Responsive design",
+      "Regression",
+      "RAG",
+      "Clustering"
+    ],
+    "answer": "A",
+    "topic": "Web",
+    "explanation": "Responsive design adapts layout."
+  },
+  {
+    "question": "Identity vs permissions:",
+    "options": [
+      "Authentication vs authorization",
+      "GET vs POST",
+      "HTML vs CSS",
+      "Mean vs median"
+    ],
+    "answer": "A",
+    "topic": "Security",
+    "explanation": "They address identity and access."
+  },
+  {
+    "question": "Protect API keys by:",
+    "options": [
+      "Secret management/environment variables",
+      "Public frontend code",
+      "Public repository",
+      "CSS"
+    ],
+    "answer": "A",
+    "topic": "Security",
+    "explanation": "Secrets should remain protected."
+  }
+]

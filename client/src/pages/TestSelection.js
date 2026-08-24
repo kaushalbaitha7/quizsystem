@@ -10,9 +10,113 @@ function TestSelection() {
 
         localStorage.setItem("selectedTest", test);
 
+        // Start fresh exam session
+        localStorage.removeItem("examStartTime");
+        localStorage.removeItem("result");
+
         navigate("/instructions");
 
     };
+
+    const tests = [
+
+        {
+            id: "test1",
+            title: "Test 1",
+            topic: "Java Basics 1",
+            questions: 20,
+            duration: "15 Minutes"
+        },
+
+        {
+            id: "test2",
+            title: "Test 2",
+            topic: "Java Fundamentals 1",
+            questions: 20,
+            duration: "15 Minutes"
+        },
+
+        {
+            id: "test3",
+            title: "Test 3",
+            topic: "AI & Data Science",
+            questions: 20,
+            duration: "15 Minutes"
+        },
+
+        {
+            id: "test4",
+            title: "Test 4",
+            topic: "Python & Data Science",
+            questions: 20,
+            duration: "15 Minutes"
+        },
+
+        {
+            id: "test5",
+            title: "Test 5",
+            topic: "Statistics & Machine Learning",
+            questions: 20,
+            duration: "15 Minutes"
+        },
+
+        {
+            id: "test6",
+            title: "Test 6",
+            topic: "Machine Learning & AI",
+            questions: 20,
+            duration: "15 Minutes"
+        },
+
+        {
+            id: "test7",
+            title: "Test 7",
+            topic: "Full Stack Web Development",
+            questions: 20,
+            duration: "15 Minutes"
+        },
+
+        {
+            id: "test8",
+            title: "Test 8",
+            topic: "React & JavaScript",
+            questions: 20,
+            duration: "15 Minutes"
+        },
+
+        {
+            id: "test9",
+            title: "Test 9",
+            topic: "Web APIs & Databases",
+            questions: 20,
+            duration: "15 Minutes"
+        },
+
+        {
+            id: "test10",
+            title: "Test 10",
+            topic: "Generative AI & LLMs",
+            questions: 20,
+            duration: "15 Minutes"
+        },
+
+        {
+            id: "test11",
+            title: "Test 11",
+            topic: "RAG, Embeddings & AI Systems",
+            questions: 20,
+            duration: "15 Minutes"
+        },
+
+        {
+            id: "test12",
+            title: "Test 12",
+            topic: "Coding, Debugging & Aptitude",
+            questions: 20,
+            duration: "15 Minutes"
+        }
+
+    ];
 
     return (
 
@@ -22,7 +126,7 @@ function TestSelection() {
 
                 <img
                     src="/logo.png"
-                    alt="logo"
+                    alt="EETIRP Logo"
                     className="selection-logo"
                 />
 
@@ -34,71 +138,54 @@ function TestSelection() {
 
                 <div className="test-grid">
 
-                    <div className="test-card">
+                    {tests.map((test) => (
 
-                        <h2>Test 1</h2>
+                        <div
+                            className="test-card"
+                            key={test.id}
+                        >
 
-                        <p>Java Basics 1</p>
+                            <h2>
+                                {test.title}
+                            </h2>
 
-                        <div className="test-info">
+                            <p>
+                                {test.topic}
+                            </p>
 
-                            <span>20 Questions</span>
+                            <div className="test-info">
 
-                            <span>15 Minutes</span>
+                                <span>
+                                    {test.questions} Questions
+                                </span>
+
+                                <span>
+                                    {test.duration}
+                                </span>
+
+                            </div>
+
+                            <button
+                                onClick={() =>
+                                    startTest(test.id)
+                                }
+                            >
+                                Start Test
+                            </button>
 
                         </div>
 
-                        <button
-                            onClick={() => startTest("test1")}
-                        >
-                            Start Test
-                        </button>
-
-                    </div>
-
-                    <div className="test-card">
-
-                        <h2>Test 2</h2>
-
-                        <p>Java Fundamentals 1</p>
-
-
-                        <div className="test-info">
-
-                            <span>20 Questions</span>
-
-                            <span>15 Minutes</span>
-
-                        </div>
-
-                        <button
-                            onClick={() => startTest("test2")}
-                        >
-                            Start Test
-                        </button>
-
-                    </div>
-
-                    <div className="test-card disabled">
-
-                        <h2>More Tests</h2>
-
-                        <p>Coming Soon</p>
-
-                        <span>Additional Assessments</span>
-
-                        <button disabled>
-                            Locked
-                        </button>
-
-                    </div>
+                    ))}
 
                 </div>
 
             </div>
 
             <footer className="footer">
-                © 2026 EETIRP LTD. | Empowering Student Innovation
+
+                © 2026 EETIRP LTD. |
+                Empowering Student Innovation
+
             </footer>
 
         </div>

@@ -1,0 +1,242 @@
+[
+  {
+    "question": "Block-scoped reassignable variable:",
+    "options": [
+      "let",
+      "const",
+      "final",
+      "define"
+    ],
+    "answer": "A",
+    "topic": "JavaScript",
+    "explanation": "let can be reassigned."
+  },
+  {
+    "question": "Binding not normally reassigned:",
+    "options": [
+      "let",
+      "const",
+      "var",
+      "change"
+    ],
+    "answer": "B",
+    "topic": "JavaScript",
+    "explanation": "const prevents reassignment."
+  },
+  {
+    "question": "2 + '2' gives:",
+    "options": [
+      "4",
+      "22",
+      "NaN",
+      "Error"
+    ],
+    "answer": "B",
+    "topic": "JavaScript",
+    "explanation": "String coercion produces '22'."
+  },
+  {
+    "question": "React is:",
+    "options": [
+      "JavaScript UI library",
+      "Database",
+      "Language",
+      "Server"
+    ],
+    "answer": "A",
+    "topic": "React",
+    "explanation": "React is a UI library."
+  },
+  {
+    "question": "Props are used to:",
+    "options": [
+      "Pass data into components",
+      "Store DB rows",
+      "Style HTML",
+      "Create servers"
+    ],
+    "answer": "A",
+    "topic": "React",
+    "explanation": "Props are component inputs."
+  },
+  {
+    "question": "State stores:",
+    "options": [
+      "Changing component data",
+      "CSS only",
+      "Schema",
+      "Ports"
+    ],
+    "answer": "A",
+    "topic": "React",
+    "explanation": "State can trigger re-rendering."
+  },
+  {
+    "question": "State hook:",
+    "options": [
+      "useState",
+      "useData",
+      "useValue",
+      "useStore"
+    ],
+    "answer": "A",
+    "topic": "React",
+    "explanation": "useState manages state."
+  },
+  {
+    "question": "Side-effect hook:",
+    "options": [
+      "useEffect",
+      "useSide",
+      "useAction",
+      "useServer"
+    ],
+    "answer": "A",
+    "topic": "React",
+    "explanation": "useEffect handles side effects."
+  },
+  {
+    "question": "Common array rendering method:",
+    "options": [
+      "map()",
+      "joinOnly()",
+      "renderAll()",
+      "eachOnly()"
+    ],
+    "answer": "A",
+    "topic": "React",
+    "explanation": "map transforms each item."
+  },
+  {
+    "question": "Select matching array items:",
+    "options": [
+      "filter()",
+      "selectAll()",
+      "pick()",
+      "whereOnly()"
+    ],
+    "answer": "A",
+    "topic": "JavaScript",
+    "explanation": "filter returns matching elements."
+  },
+  {
+    "question": "React list keys help:",
+    "options": [
+      "Identify items during reconciliation",
+      "Encrypt components",
+      "Connect MongoDB",
+      "Style buttons"
+    ],
+    "answer": "A",
+    "topic": "React",
+    "explanation": "Keys identify list elements."
+  },
+  {
+    "question": "Component is:",
+    "options": [
+      "Reusable UI unit",
+      "DB table",
+      "HTTP code",
+      "CSS file"
+    ],
+    "answer": "A",
+    "topic": "React",
+    "explanation": "Components encapsulate UI."
+  },
+  {
+    "question": "Arrow function syntax:",
+    "options": [
+      "const f = () => {}",
+      "function => f()",
+      "arrow f() {}",
+      "lambda f =>"
+    ],
+    "answer": "A",
+    "topic": "JavaScript",
+    "explanation": "This is valid arrow syntax."
+  },
+  {
+    "question": "Async function keyword:",
+    "options": [
+      "async",
+      "awaitonly",
+      "promise",
+      "deferonly"
+    ],
+    "answer": "A",
+    "topic": "JavaScript",
+    "explanation": "async marks an async function."
+  },
+  {
+    "question": "await is used to:",
+    "options": [
+      "Wait for Promise result in async code",
+      "Create CSS",
+      "Declare DB",
+      "Render only"
+    ],
+    "answer": "A",
+    "topic": "JavaScript",
+    "explanation": "await waits for settlement."
+  },
+  {
+    "question": "JSON.parse() does:",
+    "options": [
+      "JSON string → JS value",
+      "Object → JSON string",
+      "Fetch API",
+      "Create state"
+    ],
+    "answer": "A",
+    "topic": "JavaScript",
+    "explanation": "parse deserializes JSON text."
+  },
+  {
+    "question": "JSON.stringify() does:",
+    "options": [
+      "JS value → JSON string",
+      "Parse HTML",
+      "Fetch data",
+      "Create component"
+    ],
+    "answer": "A",
+    "topic": "JavaScript",
+    "explanation": "stringify serializes values."
+  },
+  {
+    "question": "Loop-exit statement:",
+    "options": [
+      "break",
+      "continue",
+      "exitLoop",
+      "end"
+    ],
+    "answer": "A",
+    "topic": "JavaScript",
+    "explanation": "break exits the loop."
+  },
+  {
+    "question": "Uninitialized variable commonly has:",
+    "options": [
+      "undefined",
+      "empty only",
+      "zero only",
+      "false only"
+    ],
+    "answer": "A",
+    "topic": "JavaScript",
+    "explanation": "Uninitialized variables are undefined."
+  },
+  {
+    "question": "State changes can cause React to re-render.",
+    "options": [
+      "True",
+      "False",
+      "Only CSS",
+      "Only refresh"
+    ],
+    "answer": "A",
+    "topic": "React",
+    "explanation": "State updates trigger rendering."
+  }
+]
