@@ -917,28 +917,12 @@ function Quiz() {
                             SUBMIT
                     ================================== */}
 
-                    <button
-
-                        className="submit-btn"
-
-                        disabled={
-                            Object.keys(
-                                answers
-                            ).length !==
-                            totalQuestions
-                        }
-
-                        onClick={() =>
-                            setShowSubmitModal(
-                                true
-                            )
-                        }
-
-                    >
-
-                        Submit Assessment
-
-                    </button>
+                        <button
+                            className="submit-btn"
+                            onClick={() => setShowSubmitModal(true)}
+                        >
+                            Submit Assessment
+                        </button>
 
 
                     {/* ==================================
